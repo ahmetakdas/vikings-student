@@ -1,0 +1,515 @@
+/* =================================================================
+HELPERS.CSS - HELPER CLASSES & MIXINS ** DO NOT EDIT **
+==================================================================*/
+
+/* Start: Helper classes 
+==================================================================*/
+@w3c: true;
+@webkit: true;
+@moz: true;
+@opera: true;
+@ms: true;
+
+@webkitSignal: 1;
+@mozSignal: 2;
+@operaSignal: 3;
+@msSignal: 4;
+@w3cSignal: 5;
+
+
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clear {
+	font-size:1px;
+	line-height:normal;
+	padding:0px;
+	margin:0px;
+	clear:both;
+}
+.text-centered {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.zero {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.last {
+	margin-right: 0 !important;
+}
+.end {
+	margin-bottom: 0 !important;
+}
+.handle {
+	cursor: move;
+}
+.normal {
+	font-weight: normal;
+}
+.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic; 
+}
+.clickable {
+	cursor: pointer;	
+}
+.hidden { 
+    display: none !important;
+    visibility: hidden;
+} 
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+.invisible {
+    visibility: hidden;
+}
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+.ir:before {
+    content: ""; 
+    display: block;
+    width: 0;
+    height: 100%;
+}
+/* End: Helper classes 
+==================================================================*/
+
+
+
+/* Start: Grid mixins 
+==================================================================*/
+.block(@num) {
+	width: ((@gridWidth - (@gridGutterWidth * @num)) / @num / (@gridWidth / 100)) * 1%;
+}
+
+.column(@num) {
+	width: ((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * 1%;
+}
+
+.columns(@factor, @num) {
+	width: (((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * @factor) + ((@gridGutterWidth / (@gridWidth / 100)) * (@factor - 1)) * 1%;
+}
+
+.column-push(@num) {
+	left: (((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) + @gridGutterWidth/(@gridWidth/100)) * 1%;
+}
+
+.columns-push(@factor, @num) {
+	left: ((((@gridWidth - (@gridGutterWidth * (@num - 1))) / @num / (@gridWidth / 100)) * @factor) + ((@gridGutterWidth / (@gridWidth / 100)) * (@factor - 1)) + @gridGutterWidth/(@gridWidth/100)) * 1%;
+}
+/* End: Grid mixins
+==================================================================*/
+
+
+
+/* Start: Helper mixins 
+==================================================================*/ 
+.size(@width, @height){
+	width: @width;
+	height: @height; 
+}
+.font-face(@fontpath, @fontfile, @fontname) {
+  @font-face: ~"@font-face";
+  @{font-face}{
+	    font-family: '@{fontname}';
+	    src: url('@{fontpath}@{fontfile}.eot');
+	    src: url('@{fontpath}@{fontfile}.eot?#iefix') format('embedded-opentype'), 
+	    	 url('@{fontpath}@{fontfile}.otf') format('opentype'),
+	         url('@{fontpath}@{fontfile}.woff') format('woff'),      
+	         url('@{fontpath}@{fontfile}.ttf') format('truetype'), 
+	         url('@{fontpath}@{fontfile}.svg#@{fontname}') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+  }
+}
+
+.opacity(@opacity: 100) {
+	filter: e(%("alpha(opacity=%d)", @opacity));
+	-moz-opacity: @opacity / 100;
+	opacity: @opacity / 100; 
+}
+.gradient(@startColor: #555, @endColor: #333) {
+	background-color: mix(@startColor, @endColor, 60%);
+	background-image: -moz-linear-gradient(top, @startColor, @endColor); /* FF 3.6+ */
+	background-image: -ms-linear-gradient(top, @startColor, @endColor); /* IE10 */
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); /* Safari 4+, Chrome 2+ */
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
+	background-image: -o-linear-gradient(top, @startColor, @endColor); /* Opera 11.10 */
+	background-image: linear-gradient(top, @startColor, @endColor); /* The standard */
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); /* IE9 and down */
+}
+ 
+.transition(@transitions:all 400ms ease-in-out) {
+  -webkit-transition: @transitions;
+     -moz-transition: @transitions;
+     -ms-transition:  @transitions;
+       -o-transition: @transitions;
+          transition: @transitions; 
+}
+
+.border-radius(@bradius:3px){
+	-webkit-border-radius: @bradius; 
+	-moz-border-radius: @bradius; 	
+    border-radius: @bradius;
+}
+.box-shadow(@boxshade:1px 1px 1px 1px #000000) {
+  -webkit-box-shadow:  @boxshade;
+  -moz-box-shadow: @boxshade;
+  box-shadow: @boxshade;
+
+}
+.text-shadow(@vars:1px 1px 2px rgba(0,0,0,.25)) {
+  -moz-text-shadow: @vars;
+  -mozkit-text-shadow: @vars;
+  text-shadow: @vars;
+
+}
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model;
+     -moz-box-sizing: @box-model;
+          box-sizing: @box-model;
+}
+.background-clip(@arguments:border-box){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-background-clip: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-background-clip: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 5) { background-clip: @arguments;}
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+.background-origin(@arguments:padding-box){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-background-origin: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-background-origin: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 5) { background-origin: @arguments;}
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+.border-image(@arguments:none){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+      @operaLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-border-image: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-border-image: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 3) { -o-border-image: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 5) { border-image: @arguments; }
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @operaSignal, @opera, @operaLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+.background-size(@bg-size) {
+	-webkit-background-size: (@bg-size);
+	-moz-background-size: (@bg-size);
+	-ms-background-size: (@bg-size);
+	-o-background-size: (@bg-size);
+	background-size: (@bg-size);
+}
+/* element{ .border-image(url(border.png) 30 30 round); } */
+ 
+.clearfixing() {
+	&:after {
+		content: " ";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+.transform(@arguments:none, ...){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+      @operaLocal: true;
+      @msLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-transform: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-transform: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 3) { -o-transform: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 4) { -ms-transform: @arguments;}
+        .inception (@signal, @arguments) when (@signal = 5) { transform: @arguments;}
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @operaSignal, @opera, @operaLocal);
+      /* -- */
+      .result(@arguments, @msSignal, @ms, @msLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+/* element{ .transform(scale(.5) translate(10px, 20px)); } */
+
+.scale(@x, @y){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+      @operaLocal: true;
+      @msLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-transform: scale(@x, @y);}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-transform: scale(@x, @y);}
+        .inception (@signal, @arguments) when (@signal = 3) { -o-transform: scale(@x, @y);}
+        .inception (@signal, @arguments) when (@signal = 4) { -ms-transform: scale(@x, @y);}
+        .inception (@signal, @arguments) when (@signal = 5) { transform: scale(@x, @y);}
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @operaSignal, @opera, @operaLocal);
+      /* -- */
+      .result(@arguments, @msSignal, @ms, @msLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+/*  
+	element{ .scale(2); }
+	element{ .scale(2, 1); } 
+*/
+
+.scale3d(@x:1, @y:1, @z:1){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+      @operaLocal: true;
+      @msLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-transform: scale3d(@x, @y, @z);}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-transform: scale3d(@x, @y, @z);}
+        .inception (@signal, @arguments) when (@signal = 3) { -o-transform: scale3d(@x, @y, @z);}
+        .inception (@signal, @arguments) when (@signal = 4) { -ms-transform: scale3d(@x, @y, @z);}
+        .inception (@signal, @arguments) when (@signal = 5) { transform: scale3d(@x, @y, @z);}
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @operaSignal, @opera, @operaLocal);
+      /* -- */
+      .result(@arguments, @msSignal, @ms, @msLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+/* element{ .scale3d(1, 2, 1); } */
+
+.rotate(@angle:0){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+      @operaLocal: true;
+      @msLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-transform: rotate(@angle+deg);}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-transform: rotate(@angle+deg);}
+        .inception (@signal, @arguments) when (@signal = 3) { -o-transform: rotate(@angle+deg);}
+        .inception (@signal, @arguments) when (@signal = 4) { -ms-transform: rotate(@angle+deg);}
+        .inception (@signal, @arguments) when (@signal = 5) { transform: rotate(@angle+deg);}
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @operaSignal, @opera, @operaLocal);
+      /* -- */
+      .result(@arguments, @msSignal, @ms, @msLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+/* element{ .rotate(45deg); } */
+
+.rotate3d(@x:0, @y:0, @z: 0, @angle:0){
+      @w3cLocal: true;
+      @webkitLocal: true;
+      @mozLocal: true;
+      @operaLocal: true;
+      @msLocal: true;
+
+      .result (@arguments, @signal, @boolean, @localBoolean) when (@boolean = true) and (@localBoolean = true) {
+        .inception (@signal, @arguments) when (@signal = 1) { -webkit-transform: rotate3d(@x, @y, @z, @angle);}
+        .inception (@signal, @arguments) when (@signal = 2) { -moz-transform: rotate3d(@x, @y, @z, @angle);}
+        .inception (@signal, @arguments) when (@signal = 3) { -o-transform: rotate3d(@x, @y, @z, @angle);}
+        .inception (@signal, @arguments) when (@signal = 4) { -ms-transform: rotate3d(@x, @y, @z, @angle);}
+        .inception (@signal, @arguments) when (@signal = 5) { transform: rotate3d(@x, @y, @z, @angle);}
+        .inception (@signal, @arguments) when (@signal > 5),(@signal < 1) { error: "Signal is out of range"; }
+        .inception(@signal, @arguments);
+      }
+      .result (@arguments, @signal, @boolean, @localBoolean) when not (@boolean = true), not (@localBoolean = true) { }
+
+      .result(@arguments, @webkitSignal, @webkit, @webkitLocal);
+      /* --  this comment must be here because of LESS bug */
+      .result(@arguments, @mozSignal, @moz, @mozLocal);
+      /* -- */
+      .result(@arguments, @operaSignal, @opera, @operaLocal);
+      /* -- */
+      .result(@arguments, @msSignal, @ms, @msLocal);
+      /* -- */
+      .result(@arguments, @w3cSignal, @w3c, @w3cLocal);
+}
+/* element{ .rotate3d(1, 2.0, 3.0, 10deg); } */
+
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+.selection(@color: #1477C5) {
+	::selection {
+		background: @color;
+	}
+	::-moz-selection {
+		background: @color;
+	}
+	img::selection {
+		background: transparent;
+	}
+	img::-moz-selection {
+		background: transparent;
+	}
+}
+
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; } /* Firefox 4-18 */
+  &::-moz-placeholder           { color: @color; } /* Firefox 19+ */
+  &:-ms-input-placeholder       { color: @color; } /* Internet Explorer 10+ */
+  &::-webkit-input-placeholder  { color: @color; padding: 2px; } /* Safari and Chrome */
+}
+.loopingClass (@index) when (@index >= 0) {
+    .m@{index} {
+    	margin: @index+px !important;
+    }
+    .mt@{index} {
+    	margin-top: @index+px !important;
+    }
+    .mr@{index} {
+    	margin-right: @index+px !important;
+    }
+    .mb@{index} {
+    	margin-bottom: @index+px !important;
+    }
+    .ml@{index} {
+    	margin-left: @index+px !important;
+    }     
+    .p@{index} {
+    	padding: @index+px !important;
+    }
+    .pt@{index} {
+    	padding-top: @index+px !important;
+    }
+    .pr@{index} {
+    	padding-right: @index+px !important;
+    }
+    .pb@{index} {
+    	padding-bottom: @index+px !important;
+    }
+    .pl@{index} {
+    	padding-left: @index+px !important;
+    }  	   
+    /* next iteration */
+    .loopingClass(@index - 5);
+}                                           
+	
+.loopingClass (@iterations);
+
+
+/* End: Helper mixins 
+==================================================================*/

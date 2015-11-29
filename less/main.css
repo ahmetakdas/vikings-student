@@ -1,0 +1,134 @@
+/* =================================================================
+BASE STYLES
+================================================================= */
+nav ul, .submenu ul, footer ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.content ul{
+	padding:0 0 0 17px;
+} 
+/* Remove text-shadow in selection highlight: h5bp.com/i. These selection declarations have to be separate. */
+::-moz-selection {
+    background: #1477C5;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity:0.5;
+    text-shadow: none;
+}
+
+::selection {
+    background: #1477C5;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity:0.5;
+    text-shadow: none;
+}
+
+
+/* =================================================================
+EDIT FROM HERE
+================================================================= */
+
+.btn {
+	display:inline-block;
+
+	&:hover {
+	}
+
+	&:active {
+	}
+
+}
+
+/* FONT STYLES */
+body, input, textarea, select {
+	font-family: @baseFontFamily;
+	font-size: 14px;
+	line-height: 25px;
+	color: @textColor;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+	font-weight:bold;
+	font-family: @headingsFontFamily;
+	color: @blue;
+}
+h1, .h1{
+	font-size: 28px;
+	line-height: 44px; 
+	margin: 0 0 20px 0;
+}
+h2, .h2 {
+	font-size: 20px;
+	line-height: 30px;
+	margin: 20px 0 0 0;
+}
+h3, .h3 {
+	font-size: 18px;
+	line-height: 25px;
+	margin: 20px 0 0 0;
+}
+h4, .h4 {
+	font-size: 16px;
+	line-height: 25px;
+	margin: 20px 0 0 0;
+}
+p {
+	margin:20px 0 0 0;
+	padding:0;
+}
+a {
+	color: @blue;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration:underline; 
+	}	
+}
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;		
+}
+
+/* CONTAINER */
+.container{
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+
+.inner {
+	max-width: 1030px;	
+	margin: 0 auto;
+	padding: 0 20px;
+	.clearfixing;
+}
+
+#main {
+	margin-top: 20px;	
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	li {
+		a {
+			text-decoration: none;
+			color: @textColor;				
+		}
+		&.selected a, a:hover {
+			text-decoration: none;
+			color: @blue;	
+		}
+		
+		i {
+			font-size: 18px;
+			margin-right: 10px;	
+		}
+	}
+}
+
