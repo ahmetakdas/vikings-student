@@ -1,0 +1,48 @@
+/* =================================================================
+THEME.CSS - DEFINE YOUR THEME HERE
+================================================================= */
+
+/* Font-faces */
+
+/* Font */
+@baseFontFamily: 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@headingsFontFamily: @baseFontFamily;
+@inputFontFamily: @baseFontFamily;
+
+/* Type */
+@baseFontSize: 14;
+@baseLineHeight: 1.65;
+@baseLine: @baseFontSize * @baseLineHeight;
+
+/* Colors */
+@black: #000000;
+@white: #ffffff;
+@blue: #0072BC;
+@blueLight: #95b5df;
+@blueDark: darken(@blue, 10%);
+@grey: #F5F5F5;
+@textColor: #4e6271;
+
+@borderColor: #e7ebee;
+
+@grey: #d4d3d3;
+@greyLight: #f4f5f5;
+@red: #C00;
+/* Grid */
+@gridWidth: 1240;
+@gridGutterWidth: 40;
+
+/* Misc sizes */
+@listsLeft: 2em;
+@columnarWidth: 150px;
+@columnarMargin: 20px; 
+ 
+/* FloatingImages */
+@floatingPadding: 0;
+@floatingBorder: none;
+
+/* Util */
+@em: @baseFontSize*1em;
+
+/* Maximum margin that is used in website */
+@iterations: 25;
