@@ -20,7 +20,7 @@ $aPages = array(
 );
 
 // Huidige pagina
-$sPath = $_SERVER['REQUEST_URI'];
+$sPath = str_replace('/2015_2016/vikings/leerling/ahmet/', '/', $_SERVER['REQUEST_URI']);
 
 if(isset($aPages[$sPath])){
 	$aPage = $aPages[$sPath];
@@ -44,9 +44,7 @@ foreach (glob("less/*.css") as $sFileName)
 
 $sCssFileName = Less_Cache::Get($aFiles);
 
-// Alle diensten en projecten
 foreach($aPages as $sLink => $aItem){
-	
 	if(isset($aItem['footer']) && $aItem['footer'] == true){
 		$aFooter[$sLink] = $aItem;	
 	}
