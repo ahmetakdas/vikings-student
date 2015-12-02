@@ -1,6 +1,6 @@
 <?
 $aProperties = array(
-	'title'		=> '',
+	'title'		=> 'VW Academy',
 	'adres'		=> '',
 	'postcode'	=> '',
 	'plaats'	=> '',

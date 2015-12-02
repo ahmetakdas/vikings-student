@@ -1,9 +1,8 @@
 $(function() {
-	$('nav').slicknav({
-		label: '',
-		duration: 600,
-		easingOpen: "easeOutBounce"
-	});
+	
+
+	$("#menu").mmenu({});
+
 	$('.equalHeights').equalHeights();
 });
 

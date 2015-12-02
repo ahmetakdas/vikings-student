@@ -7,18 +7,35 @@
 
 <title><?=$aPage['title']?> - <?=$aProperties['title']?></title>
 
-<link rel="shortcut icon" type="image/png" href="/favicon.png">
-<link rel="stylesheet" type="text/css" href="/css/<?=$sCssFileName?>" />
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
- 
-<script src="/js/jquery.js"></script>
+<link rel="shortcut icon" type="image/png" href="<?=$sRoot?>/favicon.png">
+<link rel="stylesheet" type="text/css" href="<?=$sRoot?>css/<?=$sCssFileName?>" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script src="<?=$sRoot?>js/jquery.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>   
-<script src="/js/slicknav.js"></script>
-<script src="/js/equalHeights.js"></script>
-<script src="/js/init.js"></script>
+<script src="<?=$sRoot?>js/mmenu.js"></script>
+<script src="<?=$sRoot?>js/equalHeights.js"></script>
+<script src="<?=$sRoot?>js/init.js"></script>
 </head>
 <body>
 <div id="container">
+	<nav id="menu">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/about">About us</a>
+		   <ul>
+		      <li><a href="/about/history">History</a></li>
+		      <li><a href="/about/team">The team</a></li>
+		      <li><a href="/about/address">Our address</a></li>
+		   </ul>
+		</li>
+		<li>dfar21</li>
+	</ul>
+	</nav>
 	<div id="header">
-        
+        <div class="inner text-centered">
+        	<a href="#menu"><i class="fa fa-reorder"></i>
+        	<a href="<?=$sRoot?>"><img src="<?=$sRoot?>/images/vw-logo.png" alt="logo" /></a>
+        </div>
     </div>
