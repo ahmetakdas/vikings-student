@@ -20,7 +20,7 @@ $aPages = array(
 );
 
 // Huidige pagina
-$sPath = str_replace('/2015_2016/vikings/leerling/ahmet/', '/', $_SERVER['REQUEST_URI']);
+$sPath = str_replace($sRoot, '/', $_SERVER['REQUEST_URI']);
 
 if(isset($aPages[$sPath])){
 	$aPage = $aPages[$sPath];

@@ -1,14 +1,9 @@
-/* =================================================================
-BASE STYLES
-================================================================= */
 nav ul, .submenu ul, footer ul {
 	list-style:none;
 	margin:0;
 	padding:0;
 }
-.content ul{
-	padding:0 0 0 17px;
-} 
+
 /* Remove text-shadow in selection highlight: h5bp.com/i. These selection declarations have to be separate. */
 ::-moz-selection {
     background: #1477C5;
@@ -26,28 +21,13 @@ nav ul, .submenu ul, footer ul {
     text-shadow: none;
 }
 
-
-/* =================================================================
-EDIT FROM HERE
-================================================================= */
-
-.btn {
-	display:inline-block;
-
-	&:hover {
-	}
-
-	&:active {
-	}
-
-}
-
 /* FONT STYLES */
 body, input, textarea, select {
 	font-family: @baseFontFamily;
 	font-size: 14px;
 	line-height: 25px;
 	color: @textColor;
+	background: @grey;
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 	font-weight:bold;
@@ -105,30 +85,3 @@ body, html {
 	padding: 0 20px;
 	.clearfixing;
 }
-
-#main {
-	margin-top: 20px;	
-}
-
-.list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	
-	li {
-		a {
-			text-decoration: none;
-			color: @textColor;				
-		}
-		&.selected a, a:hover {
-			text-decoration: none;
-			color: @blue;	
-		}
-		
-		i {
-			font-size: 18px;
-			margin-right: 10px;	
-		}
-	}
-}
-

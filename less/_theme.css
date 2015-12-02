@@ -1,9 +1,3 @@
-/* =================================================================
-THEME.CSS - DEFINE YOUR THEME HERE
-================================================================= */
-
-/* Font-faces */
-
 /* Font */
 @baseFontFamily: 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
 @headingsFontFamily: @baseFontFamily;
@@ -17,16 +11,11 @@ THEME.CSS - DEFINE YOUR THEME HERE
 /* Colors */
 @black: #000000;
 @white: #ffffff;
-@blue: #0072BC;
-@blueLight: #95b5df;
-@blueDark: darken(@blue, 10%);
-@grey: #F5F5F5;
-@textColor: #4e6271;
-
-@borderColor: #e7ebee;
-
-@grey: #d4d3d3;
-@greyLight: #f4f5f5;
+@blue: #00b1eb;
+@blueDark: #02285e;
+@grey: #f5f8fa;
+@textColor: #000000;
+@borderColor: #d8d9da;
 @red: #C00;
 /* Grid */
 @gridWidth: 1240;
