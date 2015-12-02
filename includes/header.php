@@ -2,12 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
 <title><?=$aPage['title']?> - <?=$aProperties['title']?></title>
 
-<link rel="shortcut icon" type="image/png" href="<?=$sRoot?>/favicon.png">
+<link rel="shortcut icon" type="image/png" href="<?=$sRoot?>favicon.png">
 <link rel="stylesheet" type="text/css" href="<?=$sRoot?>css/<?=$sCssFileName?>" />
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
 <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
