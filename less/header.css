@@ -1,5 +1,40 @@
 #header {
-	position: relative;	
+	position: relative;
+
+	#bar {
+		position: relative;
+		background: @white;
+		color: @textColor;
+		line-height: 40px;
+		padding: 10px 0;
+
+		h1 {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 24px;
+			line-height: 40px;
+		}
+		.bar_btn {
+			position: absolute;
+			top: 16px;
+			float: none !important;
+			font-size: 24px;
+			line-height: 24px;
+
+			&.left {
+				left: 10px;
+			}
+
+			&.right {
+				right: 10px;
+			}
+
+			i {
+				color: @blueDark;
+			}
+		}
+	}
 }
 
 

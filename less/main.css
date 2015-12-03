@@ -66,6 +66,9 @@ a {
 		text-decoration:underline; 
 	}	
 }
+* {
+	outline: none !important;
+}
 body, html {
 	height: 100%;
 	margin: 0;
@@ -80,8 +83,8 @@ body, html {
 }
 
 .inner {
-	max-width: 1030px;	
+	max-width: 1024px;	
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 10px;
 	.clearfixing;
 }

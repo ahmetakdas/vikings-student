@@ -1,7 +1,16 @@
 $(function() {
-	
-
-	$("#menu").mmenu({});
+	$("#menu").mmenu({
+		navbar: {
+			'title' : 'VW Academy'
+		},
+		offCanvas: {
+            position  : "right",
+        },
+        dragOpen: {
+           open: true,
+           threshold: 75
+        }
+	});
 
 	$('.equalHeights').equalHeights();
 });
