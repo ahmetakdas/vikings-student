@@ -21,20 +21,28 @@
 <script src="<?=$sRoot?>js/dragopen.js"></script>
 <script src="<?=$sRoot?>js/equalHeights.js"></script>
 <script src="<?=$sRoot?>js/init.js"></script>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 </head>
 <body>
 <div id="container">
 	<nav id="menu">
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/about">About us</a>
+			<li><a href="<?=$sRoot?>">Dashboard</a></li>
+			<li><a href="<?=$sRoot?>profiel/">Mijn profiel</a></li>
+			<li><a href="<?=$sRoot?>ritten/">Mijn ritten</a></li>
+			<li><a href="<?=$sRoot?>mijn-handelingen/">Handelingen</a>
 			   <ul>
-			      <li><a href="/about/history">History</a></li>
-			      <li><a href="/about/team">The team</a></li>
-			      <li><a href="/about/address">Our address</a></li>
-			   </ul>
+			   		<?
+			   		foreach($aHandelingen as $sKey => $aHandeling){
+			   			?>
+			   			<li><a href="<?=$sRoot?>mijn-handelingen/#<?=$sKey?>"><?=$aHandeling['name']?></a></li>
+			   			<?
+			   		}
+			   		?>
+			   	</ul>
 			</li>
-			<li><a href="/">Home</a></li>
+			<li><a href="<?=$sRoot?>think-blue/">Think Blue</a></li>
+			<li><a href="<?=$sRoot?>uitloggen/">Uitloggen</a></li>
 		</ul>
 	</nav>
 	<div id="header">
@@ -51,7 +59,4 @@
 				<a href="#menu" class="bar_btn right"><i class="fa fa-reorder"></i></a>
 			</div>
 		</div>
-        <div class="inner text-centered">
-        	<a href="<?=$sRoot?>"><img src="<?=$sRoot?>/images/vw-logo.png" alt="logo" /></a>
-        </div>
     </div>

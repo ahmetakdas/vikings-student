@@ -286,7 +286,7 @@ select.unit-100   { width: 99.4%; }
 
 /* =Mobile (Portrait)
 -----------------------------------------------------------------------------*/
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
 
 	.units-row .unit-80,
 	.units-row .unit-75,

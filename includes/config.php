@@ -2,8 +2,8 @@
 // Alle paginas
 $aPages = array(
 	'/'					=> array(
-		'title'			=> 'Home',
-		'template'		=> 'voorpagina',
+		'title'			=> 'Dashboard',
+		'template'		=> 'dashboard',
 		'description'	=> '',
 		'menu'			=> true,
 		'footer'		=> true,

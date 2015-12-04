@@ -85,6 +85,6 @@ body, html {
 .inner {
 	max-width: 1024px;	
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 15px;
 	.clearfixing;
 }

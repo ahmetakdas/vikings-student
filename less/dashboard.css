@@ -1,0 +1,12 @@
+#content {
+	#logo img {
+		width: 200px;
+	}
+	#tb-score {
+		font-size: 70px;
+		line-height: 100px;
+		color: @blueDark;
+		text-align: center;
+		margin: 0;
+	}
+}
