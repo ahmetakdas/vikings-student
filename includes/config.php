@@ -1,23 +1,62 @@
 <?
 // Alle paginas
-$aPages = array(
-	'/'					=> array(
-		'title'			=> 'Dashboard',
-		'template'		=> 'dashboard',
-		'description'	=> '',
-		'menu'			=> true,
-		'footer'		=> true,
-		'sitemap'		=> true
-	),
-	'error404'			=> array(
-		'title'			=> 'Pagina niet gevonden',
-		'template'		=> 'error404',
-		'description'	=> '',
-		'menu'			=> false,
-		'footer'		=> false,
-		'sitemap'		=> false
-	)
-);
+$aPages = [
+	'/'									=> [
+		'title'							=> 'Dashboard',
+		'template'						=> 'dashboard'
+	],
+	'/mijn-handelingen/'				=> [
+		'title'							=> 'Mijn handelingen',
+		'template'						=> 'handelingen',
+		'back'							=> $sRoot
+	],
+	'/mijn-handelingen/snelweg/'		=> [
+		'title'							=> 'Snelweg',
+		'template'						=> 'handeling',
+		'icon'							=> 'fa-info-circle',
+		'progress'						=> 67,
+		'back'							=> $sRoot.'mijn-handelingen/'
+	],
+	'/mijn-handelingen/rotonde/'		=> [
+		'title'							=> 'Rotonde',
+		'template'						=> 'handeling',
+		'icon'							=> 'fa-info-circle',
+		'progress'						=> 77,
+		'back'							=> $sRoot.'mijn-handelingen/'
+	],
+	'/mijn-handelingen/schakelen/'		=> [
+		'title'							=> 'Schakelen',
+		'template'						=> 'handeling',
+		'icon'							=> 'fa-info-circle',
+		'progress'						=> 52,
+		'back'							=> $sRoot.'mijn-handelingen/'
+	],
+	'/mijn-handelingen/kijkgedrag/'		=> [
+		'title'							=> 'Kijkgedrag',
+		'template'						=> 'handeling',
+		'icon'							=> 'fa-info-circle',
+		'progress'						=> 84,
+		'back'							=> $sRoot.'mijn-handelingen/'
+	],
+	'/mijn-handelingen/anticiperen/'	=> [
+		'title'							=> 'Anticiperen',
+		'template'						=> 'handeling',
+		'icon'							=> 'fa-info-circle',
+		'progress'						=> 90,
+		'back'							=> $sRoot.'mijn-handelingen/'
+	],
+	'/mijn-handelingen/parkeren/'		=> [
+		'title'							=> 'Parkeren',
+		'template'						=> 'handeling',
+		'icon'							=> 'fa-info-circle',
+		'progress'						=> 78,
+		'back'							=> $sRoot.'mijn-handelingen/'
+	],
+	'error404'							=> [
+		'title'							=> 'Pagina niet gevonden',
+		'template'						=> 'error404'
+	]
+];
 
 // Huidige pagina
 $sPath = str_replace($sRoot, '/', $_SERVER['REQUEST_URI']);
@@ -44,9 +83,10 @@ foreach (glob("less/*.css") as $sFileName)
 
 $sCssFileName = Less_Cache::Get($aFiles);
 
-foreach($aPages as $sLink => $aItem){
-	if(isset($aItem['footer']) && $aItem['footer'] == true){
-		$aFooter[$sLink] = $aItem;	
+$aHandelingen = [];
+foreach($aPages as $sKey => $aPagina){
+	if($aPagina['template'] == 'handeling'){
+		$aHandelingen[$sKey] = $aPagina;
 	}
 }
 ?>

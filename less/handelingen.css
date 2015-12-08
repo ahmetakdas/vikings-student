@@ -1,0 +1,59 @@
+#handelingen {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: block;
+			width: 100%;
+			margin-top: 10px;
+			padding-top: 9px;
+			border-top: 1px solid @borderColor;
+
+			.icon-holder {
+				width: 75px;
+				height: 75px;
+				padding: 25px;
+				line-height: 25px;
+				font-size: 25px;
+				color: @white;
+				background: @blueDark;
+				float: left;
+				.border-radius(100%);
+			}
+
+			.progress {
+				padding: 10px 0;
+				width: 100%;
+				padding-left: 85px;
+
+				h3 {
+					margin: 0;
+					padding: 0;
+				}
+
+				.progress-bar {
+					width: 100%;
+					background: @grey;
+					.border-radius(15px 15px 15px 15px);
+					margin-top: 5px;
+
+					.progress-width {
+						background: @blue;
+						.border-radius(15px 15px 15px 15px);
+						padding: 0 10px;
+						color: @white;
+						text-align: center;
+					}
+				}
+			}
+
+			&:first-child {
+				padding-top: 0;
+				border-top: none;
+				margin-top: 0;
+			}
+		}
+	}
+}

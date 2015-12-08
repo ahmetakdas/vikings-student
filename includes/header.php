@@ -30,12 +30,12 @@
 			<li><a href="<?=$sRoot?>">Dashboard</a></li>
 			<li><a href="<?=$sRoot?>profiel/">Mijn profiel</a></li>
 			<li><a href="<?=$sRoot?>ritten/">Mijn ritten</a></li>
-			<li><a href="<?=$sRoot?>mijn-handelingen/">Handelingen</a>
+			<li><a href="<?=$sRoot?>mijn-handelingen/">Mijn handelingen</a>
 			   <ul>
 			   		<?
 			   		foreach($aHandelingen as $sKey => $aHandeling){
 			   			?>
-			   			<li><a href="<?=$sRoot?>mijn-handelingen/#<?=$sKey?>"><?=$aHandeling['name']?></a></li>
+			   			<li><a href="<?=$sRoot.substr($sKey, 1)?>"><i class="fa <?=$aHandeling['icon']?>"></i><?=$aHandeling['title']?></a></li>
 			   			<?
 			   		}
 			   		?>
