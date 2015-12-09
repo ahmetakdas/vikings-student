@@ -28,8 +28,8 @@
 	<nav id="menu">
 		<ul>
 			<li><a href="<?=$sRoot?>">Dashboard</a></li>
-			<li><a href="<?=$sRoot?>profiel/">Mijn profiel</a></li>
-			<li><a href="<?=$sRoot?>ritten/">Mijn ritten</a></li>
+			<li><a href="<?=$sRoot?>mijn-profiel/">Mijn profiel</a></li>
+			<li><a href="<?=$sRoot?>mijn-ritten/">Mijn ritten</a></li>
 			<li><a href="<?=$sRoot?>mijn-handelingen/">Mijn handelingen</a>
 			   <ul>
 			   		<?
@@ -41,6 +41,7 @@
 			   		?>
 			   	</ul>
 			</li>
+			<li><a href="<?=$sRoot?>mijn-suggesties/">Mijn suggesties</a>
 			<li><a href="<?=$sRoot?>think-blue/">Think Blue</a></li>
 			<li><a href="<?=$sRoot?>uitloggen/">Uitloggen</a></li>
 		</ul>

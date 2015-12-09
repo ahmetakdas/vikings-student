@@ -12,6 +12,11 @@ $(function() {
         }
 	});
 
+	var sParentUrl = window.location.pathname.split('/').slice(0, -2).join('/')+'/';
+
+	$('a[href="'+window.location.pathname+'"], a[href="'+sParentUrl+'"]').parents('li').addClass('selected');
+	
+
 	$('.equalHeights').equalHeights();
 });
 

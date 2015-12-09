@@ -5,13 +5,27 @@ include("includes/header.php");
 	<div class="inner text-centered">
     	<a href="<?=$sRoot?>" id="logo"><img src="<?=$sRoot?>/images/vw-logo.png" alt="logo" /></a>
     </div>
+    <section class="inner text-centered units-row">
+    	<div class="width-50 left">
+    		<div class="progress_diagram small">
+    			<?=$aUser['progress']?>
+    		</div>
+    	</div>
+    	<div class="width-50 right">
+    		<div class="progress_diagram big">
+    			<?=$aUser['think-blue']?>
+    		</div>
+    	</div>
+    </section>
     <section class="inner text-centered" style="overflow: hidden;">
     	<h3>Voortgang</h3>
     	<div id="chart" style="width: 100%; height: 300px;"></div>
     </section>
     <section class="inner text-centered">
 		<h3>Think Blue</h3>
-		<div id="tb-score">78</div>
+		<div class="progress_diagram big">
+			<?=$aUser['think-blue']?>
+		</div>
     </section>
 </div>
 <script type="text/javascript">
@@ -50,6 +64,12 @@ include("includes/header.php");
 
 		chart.draw(data, options);
     }
+
+    var doit;
+	$(window).resize(function(){
+		clearTimeout(doit);
+		doit = setTimeout(drawChart, 100);	
+	});
 </script>
 <?
 include("includes/footer.php");

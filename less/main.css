@@ -88,3 +88,9 @@ body, html {
 	padding: 0 15px;
 	.clearfixing;
 }
+
+.mm-listview {
+	li.selected a, li a:hover {
+		color: @blue;
+	}
+}

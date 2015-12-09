@@ -5,6 +5,21 @@ $aPages = [
 		'title'							=> 'Dashboard',
 		'template'						=> 'dashboard'
 	],
+	'/mijn-profiel/'					=> [
+		'title'							=> 'Mijn profiel',
+		'template'						=> 'profiel',
+		'back'							=> $sRoot
+	],
+	'/mijn-ritten/'						=> [
+		'title'							=> 'Mijn ritten',
+		'template'						=> 'ritten',
+		'back'							=> $sRoot
+	],
+	'/mijn-suggesties/'					=> [
+		'title'							=> 'Mijn suggesties',
+		'template'						=> 'suggesties',
+		'back'							=> $sRoot
+	],
 	'/mijn-handelingen/'				=> [
 		'title'							=> 'Mijn handelingen',
 		'template'						=> 'handelingen',
@@ -51,6 +66,11 @@ $aPages = [
 		'icon'							=> 'fa-info-circle',
 		'progress'						=> 78,
 		'back'							=> $sRoot.'mijn-handelingen/'
+	],
+	'/think-blue/'					=> [
+		'title'							=> 'Think Blue',
+		'template'						=> 'think-blue',
+		'back'							=> $sRoot
 	],
 	'error404'							=> [
 		'title'							=> 'Pagina niet gevonden',

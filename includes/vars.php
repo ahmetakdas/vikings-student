@@ -9,36 +9,16 @@ $aProperties = array(
 	'email'		=> ''
 );
 
-$aHandelingen = [
-	'snelweg'		=> [
-		'name'		=> 'Snelweg',
-		'icon'		=> 'fa-info-circle',
-		'progress'	=> 67
-	],
-	'rotonde'		=> [
-		'name'		=> 'Rotonde',
-		'icon'		=> 'fa-info-circle',
-		'progress'	=> 77
-	],
-	'schakelen'		=> [
-		'name'		=> 'Schakelen',
-		'icon'		=> 'fa-info-circle',
-		'progress'	=> 52
-	],
-	'kijkgedrag'	=> [
-		'name'		=> 'Kijkgedrag',
-		'icon'		=> 'fa-info-circle',
-		'progress'	=> 84
-	],
-	'anticiperen'	=> [
-		'name'		=> 'Anticiperen',
-		'icon'		=> 'fa-info-circle',
-		'progress'	=> 90
-	],
-	'parkeren'		=> [
-		'name'		=> 'Parkeren',
-		'icon'		=> 'fa-info-circle',
-		'progress'	=> 78
-	]
+$aUser = [
+	'name'			=> 'Jasper van der Klaas',
+	'firstname'		=> 'Jasper',
+	'lastname'		=> 'van der Klaas',
+	'address'		=> 'Mathenesserlaan 1a',
+	'zipcode'		=> '3014 HG',
+	'city'			=> 'Rotterdam',
+	'phone'			=> '+31 6 12 92 07 58',
+	'email'			=> 'jasperk@gmail.com',
+	'progress'		=> '27',
+	'think-blue'	=> '52'
 ];
 ?>

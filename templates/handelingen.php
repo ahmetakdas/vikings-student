@@ -11,7 +11,7 @@ include("includes/header.php");
 					<a href="<?=$sRoot.substr($sKey, 1)?>" class="icon-holder">
 						<i class="fa <?=$aHandeling['icon']?>"></i>
 					</a>
-					<div class="progress">
+					<div class="progress_bar">
 						<h3><?=$aHandeling['title']?></h3>
 						<div class="progress-bar">
 							<div class="progress-width" style="width: <?=$aHandeling['progress']?>%"><?=$aHandeling['progress']?>%</div>
