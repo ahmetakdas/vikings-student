@@ -1,0 +1,14 @@
+#suggesties {
+	ul {
+		li {
+			text-align: center;
+			background-color: @greyDark;
+			padding: 10px;
+
+			i {
+				font-size: 40px;
+				color: @blueDark;
+			}
+		}
+	}
+}

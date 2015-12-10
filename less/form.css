@@ -1,18 +1,20 @@
 input[type="text"],input[type="password"], input[type="number"], input[type="email"], select, textarea {
-	padding: 10px;
+	padding: 10px 15px;
 	color: @textColor;
 	font-size: 14px;
 	line-height: 20px;
-	height: 40px;
 	display: inline-block;
 	font-weight: bold;	
-	border: 1px solid @grey;
+	border: 1px solid @blue;
 	.transition();
 	background: @white;
+	width: 100%;
 	
 	&:focus {
-		border-color: @blue;
-		color: @blue;	
+		border-color: @blueDark;
+		background-color: @blue;
+		color: @blueDark;	
+		.placeholder(@blueDark);
 	}
 }
 

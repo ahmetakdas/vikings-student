@@ -12,10 +12,12 @@ $(function() {
         }
 	});
 
-	var sParentUrl = window.location.pathname.split('/').slice(0, -2).join('/')+'/';
+	$('a[href="'+window.location.pathname+'"]').parents('li').addClass('selected');
 
-	$('a[href="'+window.location.pathname+'"], a[href="'+sParentUrl+'"]').parents('li').addClass('selected');
-	
+	if(window.location.pathname.split('/').length > 7){
+		var sParentUrl = window.location.pathname.split('/').slice(0, -2).join('/')+'/';
+		$('a[href="'+ sParentUrl +'"]').parents('li').addClass('selected');
+	}	
 
 	$('.equalHeights').equalHeights();
 });

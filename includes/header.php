@@ -6,6 +6,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="theme-color" content="<?=(isset($aPage['theme-color']) ? $aPage['theme-color'] : '#00b1eb')?>">
+<meta name="msapplication-navbutton-color" content="<?=(isset($aPage['theme-color']) ? $aPage['theme-color'] : '#00b1eb')?>">
+<meta name="apple-mobile-web-app-status-bar-style" content="<?=(isset($aPage['theme-color']) ? $aPage['theme-color'] : '#00b1eb')?>">
 
 <title><?=$aPage['title']?> - <?=$aProperties['title']?></title>
 
