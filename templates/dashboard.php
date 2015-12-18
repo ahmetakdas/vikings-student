@@ -2,30 +2,54 @@
 include("includes/header.php");
 ?>
 <div id="content">
-	<div class="inner text-centered">
-    	<a href="<?=$sRoot?>" id="logo"><img src="<?=$sRoot?>/images/vw-logo.png" alt="logo" /></a>
-    </div>
-    <section class="inner text-centered units-row">
+    <section class="text-centered units-row">
     	<div class="width-50 left">
+    		<h3 style="margin: 0 0 15px 0;">Mijn voortgang</h3>
     		<div class="progress_diagram small">
-    			<?=$aUser['progress']?>
+    			<?=$aUser['progress']?><span>%</span>
     		</div>
     	</div>
     	<div class="width-50 right">
+    		<h3 style="margin: 0 0 15px 0;">Think Blue</h3>
     		<div class="progress_diagram big">
     			<?=$aUser['think-blue']?>
     		</div>
     	</div>
     </section>
-    <section class="inner text-centered" style="overflow: hidden;">
-    	<h3>Voortgang</h3>
-    	<div id="chart" style="width: 100%; height: 300px;"></div>
+    <section id="ritten" class="white">
+    	<h2>Mijn ritten</h2>
+    	<p>Hier staan jouw ritten.</p>
+    	<h3>Aankomende rit</h3>
+    	<ul>    		
+			<?
+			foreach(array_slice($aRitten['aankomend'], 0, 1, true) as $iRit => $aRit){
+				?>
+				<li class="clearfix" onclick="document.location = '<?=$sRoot?>mijn-ritten/?rit=<?=$iRit?>&type=aankomend'">
+					<i class="fa fa-calendar"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?><span class="right"><i class="fa fa-angle-right"></i></span>
+				</li>
+				<?
+			}
+			?>
+    	</ul>
+    	<h3>Gereden ritten</h3>
+    	<ul>    		
+			<?
+			foreach(array_slice(array_reverse($aRitten['gereden'], true), 0, 3, true) as $iRit => $aRit){
+				?>
+				<li class="clearfix" onclick="document.location = '<?=$sRoot?>mijn-ritten/?rit=<?=$iRit?>&type=gereden'">
+					<i class="fa fa-calendar"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?><span class="right"><i class="fa fa-angle-right"></i></span>
+				</li>
+				<?
+			}
+			?>
+    	</ul>
+    	<p><a href="<?=$sRoot?>mijn-ritten/">Bekijk al mijn ritten<i class="fa fa-angle-right" style="margin-left: 10px;"></i></a></p>
     </section>
-    <section class="inner text-centered">
-		<h3>Think Blue</h3>
-		<div class="progress_diagram big">
-			<?=$aUser['think-blue']?>
-		</div>
+    <section id="hulp">
+    	<ul>
+    		<li><a href="#" class="btn">Bekijk voordelen</a></li>
+    		<li><a href="#" class="btn blueDark">Bel mijn instructeur</a></li>
+    	</ul>
     </section>
 </div>
 <script type="text/javascript">

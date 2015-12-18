@@ -1,0 +1,53 @@
+#think-blue {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			border-top: 1px solid @greyDark;
+			padding: 9px 10px 10px 10px;
+			.clearfixing;
+			font-size: 18px;
+
+			&:first-child {
+				padding-top: 0;
+				border-top: none;
+			}
+
+			a {
+				.clearfixing;
+				display: block;
+				color: @black;
+
+				&.active {
+					color: @blue !important;
+				}
+				span {
+					float: right;
+
+					i {
+						color: @blueDark;
+					}
+				}
+
+				> i {
+					font-size: 25px;
+					margin: 0 20px 0 0;
+					color: @blueDark;
+					float: left;
+				}
+
+				&:focus, &:hover {
+					text-decoration: none;
+					color: @black;
+				}
+			}
+
+			> div {
+				display: none;
+				padding-top: 10px;
+			}
+		}
+	}
+}

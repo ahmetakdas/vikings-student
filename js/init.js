@@ -8,7 +8,7 @@ $(function() {
         },
         dragOpen: {
            open: true,
-           threshold: 75
+           threshold: 55
         }
 	});
 

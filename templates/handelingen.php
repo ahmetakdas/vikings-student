@@ -32,6 +32,43 @@ include("includes/header.php");
 			?>
 		</ul>
 	</section>
+	<script type="text/javascript">
+		var aHandelingen = $("#handelingen ul li");
+
+		$('input[name="search"]').on('keyup', function(e){
+			var sValue = $(this).val();
+			var bFound = false;
+			var bMatch = false;
+
+			$("#handelingen p.no_results").remove();
+
+			$.each(aHandelingen, function(index, aHandeling){
+				var oHandeling = $(aHandeling);
+				if(oHandeling.find('h3').html().toLowerCase().indexOf(sValue.toLowerCase()) != -1){
+					bMatch = true;
+					bFound = true;
+				}
+				else {
+					bMatch = false;
+				}
+
+				if(bMatch){
+					oHandeling.fadeIn(300);
+				}
+				else{
+					oHandeling.fadeOut(100);
+				}
+			});
+
+			if(!bFound){
+				$("#handelingen").append($("<p />").addClass('no_results').html('Geen resultaten gevonden.'));
+			}
+
+			if (e.keyCode == 13) {
+				$(this).blur();
+			}
+		});
+	</script>
 </div>
 <?
 include("includes/footer.php");

@@ -71,6 +71,7 @@ input[type="radio"] {
 	.border-radius(0);
 	display: inline-block;
 	text-decoration: none;
+	text-align: center;
 	color: @white;
 	background: @blue;
 	padding: 8px;
@@ -84,5 +85,21 @@ input[type="radio"] {
 		background: @blueDark;
 		
 		text-decoration: none;
+	}
+
+	&.blueDark {
+		background: @blueDark;
+		border-color: @blueDark;
+
+		&:hover {
+			background: @blue;
+			border-color: @blue;
+		}
+	}
+
+	&.full {
+		text-align: center;
+		width: 100%;
+		display: block;
 	}
 }

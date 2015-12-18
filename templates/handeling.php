@@ -23,7 +23,21 @@ include("includes/header.php");
 		<h2>Feedback instructeur</h2>
 		<h3>6 december 2015</h3>
 		<?=$aPage['feedback']?>
-		<p><a><i class="fa fa-chevron-down" style="margin-right: 10px;"></i>Toon alle feedback</a></p>
+		<div style="display: none;" id="allFeedback">
+			<?
+			for($i = 0; $i < 3; $i++){
+				?>
+				<hr />
+				<h3>6 december 2015</h3>
+				<?=$aPage['feedback']?>
+				<?
+			}
+			?>
+		</div>
+		<p>
+			<a href="#" class="toggleAllFeedback"><i class="fa fa-chevron-down" style="margin-right: 10px;"></i>Toon alle feedback</a>
+			<a href="#" class="toggleAllFeedback" style="display: none;"><i class="fa fa-chevron-up" style="margin-right: 10px;"></i>Toon minder feedback</a>
+		</p>
 	</section>
 	<section class="white">
 		<h2 style="margin: 0;">Instructie video</h2>
@@ -44,6 +58,13 @@ include("includes/header.php");
 			?>
 		</ul>
 	</section>
+	<script type="text/javascript">
+		$(".toggleAllFeedback").on('click', function(e){
+			e.preventDefault();
+			$(".toggleAllFeedback").stop(true, true).slideToggle(300);
+			$("#allFeedback").stop(true, true).slideToggle(300);
+		});
+	</script>
 </div>
 <?
 include("includes/footer.php");

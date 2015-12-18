@@ -1,0 +1,41 @@
+#ritten {
+	ul {
+		margin: 20px 0 0 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			background-color: @grey;
+			border-left: 1px solid @greyDark;
+			border-bottom: 1px solid @greyDark;
+			border-right: 1px solid @greyDark;
+			padding: 10px;
+
+			&:first-child {
+				border-top: 1px solid @greyDark;
+			}
+
+			&:nth-child(even){
+				background-color: @white;
+			}
+
+			&.hide {
+				display: none;
+			}
+
+			i {
+				color: @blueDark;
+				margin: 0 10px 0 0;
+			}
+
+			span {
+				float: right;
+
+				i {
+					margin: 0;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}

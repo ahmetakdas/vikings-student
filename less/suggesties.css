@@ -9,6 +9,11 @@
 				font-size: 40px;
 				color: @blueDark;
 			}
+
+			h3 {
+				margin: 0 0 5px 0;
+				color: @blueDark;
+			}
 		}
 	}
 }

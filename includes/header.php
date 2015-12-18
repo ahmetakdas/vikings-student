@@ -24,7 +24,6 @@
 <script src="<?=$sRoot?>js/dragopen.js"></script>
 <script src="<?=$sRoot?>js/equalHeights.js"></script>
 <script src="<?=$sRoot?>js/init.js"></script>
-<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 </head>
 <body>
 <div id="container">

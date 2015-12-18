@@ -157,7 +157,7 @@ $aPages = [
 ];
 
 // Huidige pagina
-$sPath = str_replace($sRoot, '/', $_SERVER['REQUEST_URI']);
+$sPath = reset(explode('?', str_replace($sRoot, '/', $_SERVER['REQUEST_URI'])));
 
 if(isset($aPages[$sPath])){
 	$aPage = $aPages[$sPath];
