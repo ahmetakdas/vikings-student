@@ -42,7 +42,7 @@ include("includes/header.php");
 	}
 	else {
 		?>
-		<section class="no_padding" id="map"></section>
+		<section class="no_padding" id="map"><img src="<?=$sRoot?>images/map.jpg" alt="MAP" width="100%" /></section>
 		<section class="text-centered units-row grey">
 	    	<div class="width-50 left">
 	    		<h3 style="margin: 0 0 15px 0;">Mijn voortgang</h3>
@@ -57,22 +57,38 @@ include("includes/header.php");
 	    		</div>
 	    	</div>
 	    </section>
-		<section class="white">
+	    <section id="handelingen" class="white">
+	    	<h2 style="margin-bottom: 20px;">Mijn handelingen</h2>
+			<ul>
+				<?
+				foreach($aHandelingen as $sKey => $aHandeling){
+					if(!isset($aHandeling['improvement'])){
+						continue;
+					}
+					?>
+					<li class="clearfix" onclick="document.location = '<?=$sRoot.substr($sKey, 1)?>'">
+						<a href="<?=$sRoot.substr($sKey, 1)?>" class="icon-holder">
+							<i class="fa <?=$aHandeling['icon']?>"></i>
+						</a>
+						<div class="progress_bar improvement_bar">
+							<h3><?=$aHandeling['title']?> +<?=$aHandeling['improvement']?>%</h3>
+							<div class="progress-bar">
+								<div class="progress-width" style="width: <?=$aHandeling['progress']?>%;"><?=$aHandeling['progress']?>%</div>
+								<div class="progress-improvement" style="left: <?=$aHandeling['progress']?>%; width: <?=$aHandeling['improvement']?>%;">&nbsp;</div>
+							</div>
+						</div>
+					</li>
+					<?
+				}
+				?>
+			</ul>
+		</section>
+		<section class="grey">
 			<h2>Feedback van instructeur</h2>
 			<h3><?=$aRit['date']?> 2015</h3>
 			<p>Vandaag een goede start gemaakt. Let tijdens het invoegen vooral op de snelheid.</p>
 			<p>Je kijkgedrag kan nog veel verbeterd worden. Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>
 		</section>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc8awh8d8vE4EvYpe5cEbiqTuczHFhDWk&callback=initMap" async defer></script>
-    	<script>
-    		var map;
-			function initMap() {
-			  map = new google.maps.Map(document.getElementById('map'), {
-			    center: {lat: -34.397, lng: 150.644},
-			    zoom: 8
-			  });
-			}
-    	</script>
 		<?
 	}
 	?>

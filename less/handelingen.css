@@ -39,6 +39,7 @@
 					background: @white;
 					.border-radius(15px 15px 15px 15px);
 					margin-top: 5px;
+					position: relative;
 
 					.progress-width {
 						background: @blue;
@@ -46,6 +47,22 @@
 						padding: 0 10px;
 						color: @white;
 						text-align: center;
+					}
+
+					.progress-improvement {
+						background: green;
+						.border-radius(0 15px 15px 0);
+						padding: 0 10px;
+						color: @white;
+						text-align: center;
+						position: absolute;
+						top: 0;
+					}
+				}
+
+				&.improvement_bar .progress-bar {
+					.progress-width {
+						.border-radius(15px 0 0 15px);
 					}
 				}
 			}
