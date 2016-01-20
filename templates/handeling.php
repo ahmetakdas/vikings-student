@@ -19,8 +19,8 @@ include("includes/header.php");
 		<h2><?=$aPage['title']?></h2>
 		<?=$aPage['content']?>
 	</section>
-	<section class="grey">
-		<h2>Feedback instructeur</h2>
+	<section class="border_top">
+		<h2>Feedback</h2>
 		<h3>6 december 2015</h3>
 		<?=$aPage['feedback']?>
 		<div style="display: none;" id="allFeedback">

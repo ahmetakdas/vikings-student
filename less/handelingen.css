@@ -1,6 +1,6 @@
 #handelingen {
 	ul {
-		margin: 0;
+		margin: 20px 0 0;
 		padding: 0;
 		list-style: none;
 
@@ -8,45 +8,56 @@
 			display: block;
 			width: 100%;
 			margin-top: 10px;
-			padding-top: 9px;
-			border-top: 1px solid @borderColor;
+			padding: 10px 15px;
+			background: @white;
+			cursor: pointer;
 
 			.icon-holder {
-				width: 75px;
-				height: 75px;
-				padding: 25px;
-				line-height: 25px;
+				width: 60px;
+				height: 60px;
+				padding: 15px;
+				line-height: 30px;
 				font-size: 25px;
-				color: @white;
-				background: @blueDark;
+				color: @blue;
+				background: @white;
+				border: 2px solid @greyLight;
 				float: left;
 				.border-radius(100%);
     			text-align: center;
+    			position: relative;
+
+    			i {
+    				position: absolute;
+    				top: 17px;
+    				left: 17px;
+    				font-size: 25px;
+    			}
 			}
 
 			.progress_bar {
-				padding: 10px 0;
+				padding: 0;
+				margin: 7px 0 0 0;
 				width: 100%;
-				padding-left: 85px;
+				padding-left: 75px;
 
-				h3 {
+				h4 {
 					margin: 0;
 					padding: 0;
 				}
 
 				.progress-bar {
-					width: 100%;
-					background: @white;
-					.border-radius(15px 15px 15px 15px);
+					width: 80%;
+					background: @greyLight;
+					.border-radius(5px 5px 5px 5px);
 					margin-top: 5px;
 					position: relative;
+					float: left;
 
 					.progress-width {
 						background: @blue;
-						.border-radius(15px 15px 15px 15px);
-						padding: 0 10px;
-						color: @white;
-						text-align: center;
+						.border-radius(5px 5px 5px 5px);
+						padding: 0;
+						height: 10px;
 					}
 
 					.progress-improvement {
@@ -60,6 +71,16 @@
 					}
 				}
 
+				.progress-amount {
+					width: 20%;
+					float: left;
+					font-family: @VWHEAD;
+					font-size: 13px;
+					text-align: right;
+					line-height: 15px;
+					margin-top: 2px;
+				}
+
 				&.improvement_bar .progress-bar {
 					.progress-width {
 						.border-radius(15px 0 0 15px);
@@ -68,9 +89,22 @@
 			}
 
 			&:first-child {
-				padding-top: 0;
-				border-top: none;
 				margin-top: 0;
+			}
+
+			&#thinkBlue {
+				background: @blue;
+				color: @white;
+
+				.icon_holder {
+					border-color: @white;
+				}
+
+				h4 {
+					color: @white;
+					line-height: 30px;
+					margin-top: 15px;
+				}
 			}
 		}
 	}

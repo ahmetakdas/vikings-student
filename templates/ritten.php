@@ -6,10 +6,12 @@ if(isset($_GET['rit']) && isset($_GET['type'])){
 include("includes/header.php");
 ?>
 <div id="content">
-	<section id="ritten" class="white">
-    	<h2>Mijn ritten</h2>
-    	<p>Hier staan jouw ritten.</p>
-    	<h3>Aankomende rit</h3>
+	<section id="ritten" class="white border_top">
+		<h4>Opmerkingen</h4>
+		<p class="m0">Ahmet lijkt faalangst te hebben. Zorg dat je hem voldoende mentale ondersteuning geeft zodat hij met vertrouwen de weg op kan.</p>
+	</section>
+	<section id="ritten" class="white border_top">
+    	<h4>Aankomende ritten</h4>
     	<div class="clearfix">
 	    	<ul>    		
 				<?
@@ -18,7 +20,8 @@ include("includes/header.php");
 					$i++;
 					?>
 					<li class="clearfix<?=($i > 3 ? ' hide' : '')?>" onclick="document.location = '<?=$sRoot.substr($sPath, 1)?>?rit=<?=$iRit?>&type=aankomend'">
-						<i class="fa fa-calendar"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?><span class="right"><i class="fa fa-angle-right"></i></span>
+						<h3><?=$aRit['date']?></h3>
+						<?=$aRit['time_start']?> - <?=$aRit['time_end']?>
 					</li>
 					<?
 				}
@@ -29,8 +32,8 @@ include("includes/header.php");
 	    		<a href="#" class="toggleRitten btn full" style="display: none;">Toon minder aankomende ritten<i class="fa fa-angle-up" style="margin-left: 10px;"></i></a>
 	    	</p>
     	</div>
-    	<div class="clearfix">
-    		<h3>Gereden ritten</h3>
+    	<div class="clearfix" style="margin-top: 30px;">
+    		<h4>Gereden ritten</h4>
 	    	<ul>    		
 				<?
 				$i = 0;
@@ -38,7 +41,8 @@ include("includes/header.php");
 					$i++;
 					?>
 					<li class="clearfix<?=($i > 3 ? ' hide' : '')?>" onclick="document.location = '<?=$sRoot.substr($sPath, 1)?>?rit=<?=$iRit?>&type=gereden'">
-						<i class="fa fa-calendar"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?><span class="right"><i class="fa fa-angle-right"></i></span>
+						<h3><?=$aRit['date']?></h3>
+						<?=$aRit['time_start']?> - <?=$aRit['time_end']?>
 					</li>
 					<?
 				}

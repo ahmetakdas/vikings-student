@@ -25,71 +25,81 @@ $aUser = [
 $aRitten = [
 	'aankomend'				=> [
 		[
-			'date'			=> '10 dec',
+			'date'			=> 'Donderdag 7 Januari',
 			'time_start'	=> '13:50',
 			'time_end'		=> '15:00'
 		],
 		[
-			'date'			=> '13 dec',
+			'date'			=> 'Donderdag 14 Januari',
 			'time_start'	=> '14:50',
 			'time_end'		=> '16:00'
 		],
 		[
-			'date'			=> '15 dec',
+			'date'			=> 'Donderdag 21 Januari',
 			'time_start'	=> '13:50',
 			'time_end'		=> '15:00'
 		],
 		[
-			'date'			=> '19 dec',
+			'date'			=> 'Donderdag 28 Januari',
 			'time_start'	=> '11:50',
 			'time_end'		=> '13:00'
 		],
 		[
-			'date'			=> '23 dec',
+			'date'			=> 'Donderdag 4 Februari',
 			'time_start'	=> '15:50',
 			'time_end'		=> '17:00'
 		]
 	],
 	'gereden'				=> [
 		[
-			'date'			=> '16 nov',
-			'time_start'	=> '14:50',
-			'time_end'		=> '16:00'
-		],
-		[
-			'date'			=> '18 nov',
-			'time_start'	=> '13:50',
-			'time_end'		=> '17:00'
-		],
-		[
-			'date'			=> '24 nov',
-			'time_start'	=> '11:50',
-			'time_end'		=> '13:00'
-		],
-		[
-			'date'			=> '27 nov',
-			'time_start'	=> '14:50',
-			'time_end'		=> '16:00'
-		],
-		[
-			'date'			=> '2 dec',
+			'date'			=> 'Donderdag 7 Januari',
 			'time_start'	=> '13:50',
 			'time_end'		=> '15:00'
 		],
 		[
-			'date'			=> '5 dec',
+			'date'			=> 'Donderdag 14 Januari',
 			'time_start'	=> '14:50',
 			'time_end'		=> '16:00'
 		],
 		[
-			'date'			=> '7 dec',
+			'date'			=> 'Donderdag 21 Januari',
+			'time_start'	=> '13:50',
+			'time_end'		=> '15:00'
+		],
+		[
+			'date'			=> 'Donderdag 28 Januari',
+			'time_start'	=> '11:50',
+			'time_end'		=> '13:00'
+		],
+		[
+			'date'			=> 'Donderdag 4 Februari',
+			'time_start'	=> '15:50',
+			'time_end'		=> '17:00'
+		],
+		[
+			'date'			=> 'Donderdag 7 Januari',
+			'time_start'	=> '13:50',
+			'time_end'		=> '15:00'
+		],
+		[
+			'date'			=> 'Donderdag 14 Januari',
 			'time_start'	=> '14:50',
 			'time_end'		=> '16:00'
 		],
 		[
-			'date'			=> '8 dec',
-			'time_start'	=> '14:50',
-			'time_end'		=> '16:00'
+			'date'			=> 'Donderdag 21 Januari',
+			'time_start'	=> '13:50',
+			'time_end'		=> '15:00'
+		],
+		[
+			'date'			=> 'Donderdag 28 Januari',
+			'time_start'	=> '11:50',
+			'time_end'		=> '13:00'
+		],
+		[
+			'date'			=> 'Donderdag 4 Februari',
+			'time_start'	=> '15:50',
+			'time_end'		=> '17:00'
 		]
 	]
 ];

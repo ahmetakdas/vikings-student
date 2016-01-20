@@ -7,7 +7,7 @@ $aPage['back'] 	= $sRoot.substr($sPath, 1);
 include("includes/header.php");
 ?>
 <div id="content">
-	<section class="white text-centered no_padding_top">
+	<section class="white detail text-centered border_top">
 		<p style="margin: 0;"><i class="fa fa-calendar" style="margin-right: 10px;"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?></p>
 	</section>
 	<?

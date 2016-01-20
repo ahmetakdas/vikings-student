@@ -2,42 +2,31 @@
 include("includes/header.php");
 ?>
 <div id="content">
-    <section class="text-centered units-row">
-    	<div class="width-50 left">
-    		<h3 style="margin: 0 0 15px 0;">Mijn voortgang</h3>
-    		<div class="progress_diagram small">
-    			<?=$aUser['progress']?><span>%</span>
-    		</div>
-    	</div>
-    	<div class="width-50 right">
-    		<h3 style="margin: 0 0 15px 0;">Think Blue</h3>
-    		<div class="progress_diagram big">
-    			<?=$aUser['think-blue']?>
-    		</div>
-    	</div>
+    <section class="text-centered grey border_top border_light">
+    	<img src="<?=$sRoot?>images/progress.png" alt="Progress" />
     </section>
-    <section id="ritten" class="white">
-    	<h2>Mijn ritten</h2>
-    	<p>Hier staan jouw ritten.</p>
-    	<h3>Aankomende rit</h3>
+    <section id="ritten" class="white border_top">
+    	<h4>Aankomende ritten</h4>
     	<ul>    		
 			<?
 			foreach(array_slice($aRitten['aankomend'], 0, 1, true) as $iRit => $aRit){
 				?>
 				<li class="clearfix" onclick="document.location = '<?=$sRoot?>mijn-ritten/?rit=<?=$iRit?>&type=aankomend'">
-					<i class="fa fa-calendar"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?><span class="right"><i class="fa fa-angle-right"></i></span>
+					<h3><?=$aRit['date']?></h3>
+					<?=$aRit['time_start']?> - <?=$aRit['time_end']?>
 				</li>
 				<?
 			}
 			?>
     	</ul>
-    	<h3>Gereden ritten</h3>
+    	<h4 style="margin-top: 30px;">Gereden ritten</h4>
     	<ul>    		
 			<?
 			foreach(array_slice(array_reverse($aRitten['gereden'], true), 0, 3, true) as $iRit => $aRit){
 				?>
 				<li class="clearfix" onclick="document.location = '<?=$sRoot?>mijn-ritten/?rit=<?=$iRit?>&type=gereden'">
-					<i class="fa fa-calendar"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?><span class="right"><i class="fa fa-angle-right"></i></span>
+					<h3><?=$aRit['date']?></h3>
+					<?=$aRit['time_start']?> - <?=$aRit['time_end']?>
 				</li>
 				<?
 			}
@@ -45,7 +34,7 @@ include("includes/header.php");
     	</ul>
     	<p><a href="<?=$sRoot?>mijn-ritten/">Bekijk al mijn ritten<i class="fa fa-angle-right" style="margin-left: 10px;"></i></a></p>
     </section>
-    <section id="hulp">
+    <section id="hulp" class="grey border_top border_light">
     	<ul>
     		<li><a href="#" class="btn">Bekijk voordelen</a></li>
     		<li><a href="#" class="btn blueDark">Bel mijn instructeur</a></li>

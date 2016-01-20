@@ -2,7 +2,7 @@
 include("includes/header.php");
 ?>
 <div id="content">
-	<section class="white text-centered" id="profile_image">
+	<section class="white text-centered border_top" id="profile_image">
 		<img src="<?=$sRoot?>images/ahmet.jpg" alt="<?=$aUser['name']?>" class="profile" />
 		<a href="#" class="shortcut_link"><i class="fa fa-edit"></i> Profiel wijzigen</a>
 	</section>

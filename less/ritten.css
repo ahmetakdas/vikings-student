@@ -1,41 +1,27 @@
 #ritten {
 	ul {
-		margin: 20px 0 0 0;
+		margin: 15px 0 15px 0;
 		padding: 0;
 		list-style: none;
 
 		li {
 			background-color: @grey;
-			border-left: 1px solid @greyDark;
-			border-bottom: 1px solid @greyDark;
-			border-right: 1px solid @greyDark;
-			padding: 10px;
+			padding: 15px 20px 20px;
+			margin-top: 10px;
+			font-family: @VWHEAD;
+			font-size: 13px;
 
 			&:first-child {
-				border-top: 1px solid @greyDark;
-			}
-
-			&:nth-child(even){
-				background-color: @white;
+				margin-top: 0;
 			}
 
 			&.hide {
 				display: none;
 			}
-
-			i {
-				color: @blueDark;
-				margin: 0 10px 0 0;
-			}
-
-			span {
-				float: right;
-
-				i {
-					margin: 0;
-					font-size: 18px;
-				}
-			}
 		}
+	}
+
+	p {
+		margin: 0;
 	}
 }

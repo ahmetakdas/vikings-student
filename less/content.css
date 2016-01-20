@@ -51,7 +51,6 @@
 		.border-radius(100%);
 		width: 200px;
 		height: 200px;
-		border: 10px solid @blue;
 		display: block;
 		margin: 0 auto;
 		clear: both;
@@ -90,7 +89,7 @@
 	}
 
 	section {
-		padding: 15px;
+		padding: 30px 20px;
 		position: relative;
 		.clearfixing;
 
@@ -105,6 +104,11 @@
 		&.grey {
 			background-color: @grey;
 		}
+
+		&.detail {
+			color: @blueLight;
+			font-size: 13px;
+		}
 		
 		&.no_padding {
 			padding: 0;
@@ -113,12 +117,34 @@
 		&.no_padding_top {
 			padding-top: 0;
 		}
+
+		&.border_top {
+			border-top: 1px solid @greyLight;
+		}
+
+		&.border_bottom {
+			border-bottom: 1px solid @greyLight;
+		}
+
+		&.grey.border_top, &.grey .border_bottom {
+			border-color: @greyDark;
+		}
+
+		&.grey.border_top.border_light, &.grey.border_bottom.border_light {
+			border-color: @greyLight;
+		}
+
+		&.border_top.border_dark, &.border_bottom.border_dark {
+			border-color: @greyDark;
+		}
 		
 		> *:first-child {
 			margin-top: 0;
 		}
 		
 		&#search {
+			position: relative;
+
 			input {
 				width: 100%;
 				padding-left: 35px;
@@ -126,9 +152,14 @@
 
 			i {
 				position: absolute;
-				left: 27px;
-				top: 29px;
+				left: 30px;
+				top: 41px;
 			}
+		}
+
+		input[name="search"]{
+			display: block;
+			margin-top: 15px;
 		}
 		
 		&#hulp {

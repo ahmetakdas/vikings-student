@@ -5,16 +5,16 @@ input[type="text"],input[type="password"], input[type="number"], input[type="ema
 	line-height: 20px;
 	display: inline-block;
 	font-weight: bold;	
-	border: 1px solid @blue;
+	border: 1px solid @greyLight;
 	.transition();
 	background: @white;
 	width: 100%;
 	
 	&:focus {
-		border-color: @blueDark;
-		background-color: @blue;
-		color: @blueDark;	
-		.placeholder(@blueDark);
+		border-color: @greyDark;
+		background-color: @greyLight;
+		color: @black;	
+		.placeholder(@black);
 	}
 }
 

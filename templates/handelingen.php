@@ -2,17 +2,20 @@
 include("includes/header.php");
 ?>
 <div id="content">
-	<section id="progress" class="white text-centered">
-		<div class="progress_diagram small">
-			<?=$aUser['progress']?>
-		</div>
-	</section>
-	<section id="search">
-		<input type="text" name="search" placeholder="Zoek snel naar een handeling" />
-		<i class="fa fa-search"></i>
-	</section>
-	<section id="handelingen">
+	<section class="text-centered grey border_top border_light">
+    	<img src="<?=$sRoot?>images/progress.png" alt="Progress" />
+    </section>
+    <section id="handelingen" class="grey border_top">
+		<h4>Voortgang<i class="fa fa-search" id="toggleSearch"></i></h4>
+		<input type="text" name="search" placeholder="Zoek snel naar een handeling" style="display: none;" />
 		<ul>
+			<li class="clearfix" id="thinkBlue">
+				<a href="<?=$sRoot.substr($sKey, 1)?>" class="icon-holder">
+				</a>
+				<div class="progress_bar">
+					<h4>Think Blue. Score</h4>
+				</div>
+			</li>
 			<?
 			foreach($aHandelingen as $sKey => $aHandeling){
 				?>
@@ -20,11 +23,12 @@ include("includes/header.php");
 					<a href="<?=$sRoot.substr($sKey, 1)?>" class="icon-holder">
 						<i class="fa <?=$aHandeling['icon']?>"></i>
 					</a>
-					<div class="progress_bar">
-						<h3><?=$aHandeling['title']?></h3>
+					<div class="progress_bar clearfix">
+						<h4><?=$aHandeling['title']?></h4>
 						<div class="progress-bar">
-							<div class="progress-width" style="width: <?=$aHandeling['progress']?>%"><?=$aHandeling['progress']?>%</div>
+							<div class="progress-width" style="width: <?=$aHandeling['progress']?>%"></div>
 						</div>
+						<div class="progress-amount"><?=$aHandeling['progress']?>%</div>
 					</div>
 				</li>
 				<?
@@ -33,6 +37,11 @@ include("includes/header.php");
 		</ul>
 	</section>
 	<script type="text/javascript">
+
+		$("#toggleSearch").on('click', function(e){
+			$('input[name="search"]').fadeIn(300);
+		});
+
 		var aHandelingen = $("#handelingen ul li");
 
 		$('input[name="search"]').on('keyup', function(e){
@@ -44,7 +53,7 @@ include("includes/header.php");
 
 			$.each(aHandelingen, function(index, aHandeling){
 				var oHandeling = $(aHandeling);
-				if(oHandeling.find('h3').html().toLowerCase().indexOf(sValue.toLowerCase()) != -1){
+				if(oHandeling.find('h4').html().toLowerCase().indexOf(sValue.toLowerCase()) != -1){
 					bMatch = true;
 					bFound = true;
 				}

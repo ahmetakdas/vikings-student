@@ -1,21 +1,36 @@
 /* Font */
-@baseFontFamily: 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
-@headingsFontFamily: @baseFontFamily;
+@VW: 'vw_textregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWBOLD: 'vw_textbold', 'vw_textregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWBOLDITALIC: 'vw_textbold_italic', 'vw_textregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWITALIC: 'vw_textregular_italic', 'vw_textregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWLIGHT: 'vw_textlight' ,'vw_textregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+
+@VWHEAD: 'vw_headregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWHEADBOLD: 'vw_headbold', 'vw_headregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWHEADBOLDITALIC: 'vw_headbold_italic', 'vw_headregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWHEADEXTRABOLD: 'vw_headextrabold', 'vw_headbold', 'vw_headregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWHEADITALIC: 'vw_headregular_italic', 'vw_headregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+@VWHEADLIGHT: 'vw_headlight' ,'vw_headregular', 'Open Sans', Arial, Helvetica, Tahoma, sans-serif;
+
+@baseFontFamily: @VW;
+@headingsFontFamily: @VWHEADBOLD;
 @inputFontFamily: @baseFontFamily;
 
 /* Type */
-@baseFontSize: 14;
+@baseFontSize: 13;
 @baseLineHeight: 1.65;
 @baseLine: @baseFontSize * @baseLineHeight;
 
 /* Colors */
 @black: #000000;
 @white: #ffffff;
-@blue: #00b1eb;
+@blue: #16a1e7;
 @blueDark: #02285e;
-@grey: #f5f8fa;
-@greyDark: #EEE;
-@textColor: #000000;
+@blueLight: #839096;
+@grey: #eef2f4;
+@greyDark: #c0c3c5;
+@greyLight: #eaeaea;
+@textColor: #6d6f72;
 @borderColor: #d8d9da;
 @red: #C00;
 /* Grid */

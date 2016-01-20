@@ -15,8 +15,9 @@ nav {
 			margin: 0;
 			padding: 0;
 			text-align: center;
-			font-size: 24px;
+			font-size: 22px;
 			line-height: 40px;
+			color: @black;
 		}
 		.bar_btn {
 			position: absolute;
@@ -36,7 +37,7 @@ nav {
 			}
 
 			i {
-				color: @blueDark;
+				color: @black;
 			}
 		}
 	}
