@@ -8,14 +8,14 @@ include("includes/header.php");
 ?>
 <div id="content">
 	<section class="white detail text-centered border_top">
-		<p style="margin: 0;"><i class="fa fa-calendar" style="margin-right: 10px;"></i><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?></p>
+		<p style="margin: 0;"><?=$aRit['date']?>. <?=$aRit['time_start']?> - <?=$aRit['time_end']?></p>
 	</section>
 	<?
 	if($sType == 'aankomend'){
 		?>
-		<section id="suggesties" class="grey">
-			<h2>Handelingen die aan bod komen</h2>
-			<ul class="blocks-3">
+		<section id="suggesties" class="grey border_top border_light">
+			<h4>Handelingen die aan bod komen</h4>
+			<ul class="blocks-4">
 				<?
 				foreach($aHandelingen as $sKey => $aHandeling){
 					if(!$aHandeling['suggestie']){
@@ -23,8 +23,7 @@ include("includes/header.php");
 					}
 					?>
 					<li>
-						<h3><?=$aHandeling['title']?></h3>
-						<i class="fa <?=$aHandeling['icon']?>"></i>
+						<a><img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" /></a>
 					</li>
 					<?
 				}
@@ -32,34 +31,40 @@ include("includes/header.php");
 			</ul>
 			<p><a class="btn full clearfix" href="<?=$sRoot?>mijn-suggesties/">Bekijk mijn suggesties<span class="right"><i class="fa fa-angle-right"></i></span></a></p>
 		</section>
-		<section class="white">
-			<h2>Feedback van laatste les</h2>
-			<h3><?=end($aRitten['gereden'])['date']?> 2015</h3>
-			<p>Vandaag een goede start gemaakt. Let tijdens het invoegen vooral op de snelheid.</p>
-			<p>Je kijkgedrag kan nog veel verbeterd worden. Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>
+		<section class="white border_top" id="feedback">
+			<h4>Feedback van laatste les</h4>
+			<ul>
+				<li>
+					<p>Je kijkgedrag kan nog veel verbeterd worden. Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>
+					<div><?=end($aRitten['gereden'])['datetime']?></div>
+				</li>
+			</ul>
 		</section>
 		<?
 	}
 	else {
 		?>
-		<section class="no_padding" id="map"><img src="<?=$sRoot?>images/map.jpg" alt="MAP" width="100%" /></section>
-		<section class="text-centered units-row grey">
-	    	<div class="width-50 left">
-	    		<h3 style="margin: 0 0 15px 0;">Mijn voortgang</h3>
-	    		<div class="progress_diagram small">
-	    			<?=$aUser['progress']?><span>%</span>
-	    		</div>
-	    	</div>
-	    	<div class="width-50 right">
-	    		<h3 style="margin: 0 0 15px 0;">Think Blue</h3>
-	    		<div class="progress_diagram big">
-	    			<?=$aUser['think-blue']?>
-	    		</div>
-	    	</div>
-	    </section>
-	    <section id="handelingen" class="white">
-	    	<h2 style="margin-bottom: 20px;">Mijn handelingen</h2>
+		<section class="no_padding" id="map"><img src="<?=$sRoot?>images/map2.jpg" alt="MAP" width="100%" /></section>
+		<section class="white border_top" id="feedback">
+			<h4>Feedback</h4>
 			<ul>
+				<li>
+					<p>Vandaag een goede start gemaakt. Let tijdens het invoegen vooral op de snelheid.</p>
+					<div><?=$aRit['datetime']?></div>
+				</li>
+			</ul>
+		</section>
+	    <section id="handelingen" class="grey border_top">
+	    	<h4>Handelingen</h4>
+			<ul>
+				<li class="clearfix" id="thinkBlue">
+					<a class="icon-holder">
+						<img src="<?=$sRoot?>images/icons/tb.png" />
+					</a>
+					<div class="progress_bar">
+						<h4>Think Blue. Score</h4>
+					</div>
+				</li>
 				<?
 				foreach($aHandelingen as $sKey => $aHandeling){
 					if(!isset($aHandeling['improvement'])){
@@ -68,26 +73,20 @@ include("includes/header.php");
 					?>
 					<li class="clearfix" onclick="document.location = '<?=$sRoot.substr($sKey, 1)?>'">
 						<a href="<?=$sRoot.substr($sKey, 1)?>" class="icon-holder">
-							<i class="fa <?=$aHandeling['icon']?>"></i>
+							<img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" />
 						</a>
 						<div class="progress_bar improvement_bar">
-							<h3><?=$aHandeling['title']?> +<?=$aHandeling['improvement']?>%</h3>
+							<h4><?=$aHandeling['title']?> <span>+<?=$aHandeling['improvement']?>%</span></h4>
 							<div class="progress-bar">
-								<div class="progress-width" style="width: <?=$aHandeling['progress']?>%;"><?=$aHandeling['progress']?>%</div>
-								<div class="progress-improvement" style="left: <?=$aHandeling['progress']?>%; width: <?=$aHandeling['improvement']?>%;">&nbsp;</div>
+								<div class="progress-width" style="width: <?=$aHandeling['progress']?>%"></div>
 							</div>
+							<div class="progress-amount"><?=$aHandeling['progress']?>%</div>
 						</div>
 					</li>
 					<?
 				}
 				?>
 			</ul>
-		</section>
-		<section class="grey">
-			<h2>Feedback van instructeur</h2>
-			<h3><?=$aRit['date']?> 2015</h3>
-			<p>Vandaag een goede start gemaakt. Let tijdens het invoegen vooral op de snelheid.</p>
-			<p>Je kijkgedrag kan nog veel verbeterd worden. Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>
 		</section>
 		<?
 	}

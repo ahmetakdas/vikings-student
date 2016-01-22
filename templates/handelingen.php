@@ -10,7 +10,8 @@ include("includes/header.php");
 		<input type="text" name="search" placeholder="Zoek snel naar een handeling" style="display: none;" />
 		<ul>
 			<li class="clearfix" id="thinkBlue">
-				<a href="<?=$sRoot.substr($sKey, 1)?>" class="icon-holder">
+				<a class="icon-holder">
+					<img src="<?=$sRoot?>images/icons/tb.png" />
 				</a>
 				<div class="progress_bar">
 					<h4>Think Blue. Score</h4>
@@ -21,7 +22,7 @@ include("includes/header.php");
 				?>
 				<li class="clearfix" onclick="document.location = '<?=$sRoot.substr($sKey, 1)?>'">
 					<a href="<?=$sRoot.substr($sKey, 1)?>" class="icon-holder">
-						<i class="fa <?=$aHandeling['icon']?>"></i>
+						<img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" />
 					</a>
 					<div class="progress_bar clearfix">
 						<h4><?=$aHandeling['title']?></h4>
@@ -39,6 +40,7 @@ include("includes/header.php");
 	<script type="text/javascript">
 
 		$("#toggleSearch").on('click', function(e){
+			$(this).fadeOut(300);
 			$('input[name="search"]').fadeIn(300);
 		});
 

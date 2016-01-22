@@ -2,20 +2,21 @@
 include("includes/header.php");
 ?>
 <div id="content">
-	<section class="white">
+	<section class="white border_top" id="search">
 		<p>Voeg een handeling toe waar jij je nog onzeker over voelt zodat de instructeur hier rekening mee kan houden.</p>
+		<h4 style="margin-top: 15px;">Suggesties toevoegen</h4>
+		<div style="position: relative;">
+			<input type="text" name="search" placeholder="Zoek snel naar een handeling" />
+			<i class="fa fa-search" style="left: 12px; top: 13px;"></i>
+		</div>
 	</section>
-	<section id="search">
-		<input type="text" name="search" placeholder="Zoek snel naar een handeling" />
-		<i class="fa fa-search"></i>
-	</section>
-	<section id="suggesties" class="white search_suggesties" style="display: none;">
-		<h2>Gevonden suggesties</h2>
+	<section id="suggesties" class="grey border_top search_suggesties" style="display: none;">
+		<h4>Gevonden suggesties</h4>
 		<div class="results"></div>
 	</section>
-	<section id="suggesties" class="white">
-		<h2>Toegevoegde suggesties</h2>
-		<ul class="blocks-3">
+	<section id="suggesties" class="grey border_top">
+		<h4>Mijn suggesties</h4>
+		<ul class="blocks-4">
 			<?
 			foreach($aHandelingen as $sKey => $aHandeling){
 				if(!$aHandeling['suggestie']){
@@ -23,8 +24,7 @@ include("includes/header.php");
 				}
 				?>
 				<li>
-					<h3><?=$aHandeling['title']?></h3>
-					<i class="fa <?=$aHandeling['icon']?>"></i>
+					<a><img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" /></a>
 				</li>
 				<?
 			}
@@ -55,12 +55,13 @@ include("includes/header.php");
 			$(".search_suggesties").slideDown(300);
 
 			if(aFound.length){
-				var oList = $("<ul />").addClass('blocks-3');
+				var oList = $("<ul />").addClass('blocks-4');
 				
 				$.each(aFound, function(index, aHandeling){
 					var oItem = $("<li />");
-					oItem.append($('<h3 />').html(aHandeling.title));
-					oItem.append($('<i />').addClass('fa ' + aHandeling.icon));
+					var oLink = $('<a />');
+					oItem.append(oLink);
+					oLink.append($('<img />').attr('src', '<?=$sRoot?>images/icons/'+aHandeling['icon']+'.png'));
 					oItem.appendTo(oList);
 				});
 

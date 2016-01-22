@@ -7,10 +7,6 @@ include("includes/header.php");
 ?>
 <div id="content">
 	<section id="ritten" class="white border_top">
-		<h4>Opmerkingen</h4>
-		<p class="m0">Ahmet lijkt faalangst te hebben. Zorg dat je hem voldoende mentale ondersteuning geeft zodat hij met vertrouwen de weg op kan.</p>
-	</section>
-	<section id="ritten" class="white border_top">
     	<h4>Aankomende ritten</h4>
     	<div class="clearfix">
 	    	<ul>    		
@@ -28,8 +24,8 @@ include("includes/header.php");
 				?>
 	    	</ul>
 	    	<p>
-	    		<a href="#" class="toggleRitten btn full">Toon al mijn aankomende ritten<i class="fa fa-angle-down" style="margin-left: 10px;"></i></a>
-	    		<a href="#" class="toggleRitten btn full" style="display: none;">Toon minder aankomende ritten<i class="fa fa-angle-up" style="margin-left: 10px;"></i></a>
+	    		<a href="#" class="toggleRitten btn full">Toon meer<i class="fa fa-angle-down" style="margin-left: 10px;"></i></a>
+	    		<a href="#" class="toggleRitten btn full" style="display: none;">Toon minder<i class="fa fa-angle-up" style="margin-left: 10px;"></i></a>
 	    	</p>
     	</div>
     	<div class="clearfix" style="margin-top: 30px;">
@@ -49,8 +45,8 @@ include("includes/header.php");
 				?>
 	    	</ul>
 	    	<p>
-	    		<a href="#" class="toggleRitten btn full">Toon al mijn gereden ritten<i class="fa fa-angle-down" style="margin-left: 10px;"></i></a>
-	    		<a href="#" class="toggleRitten btn full" style="display: none;">Toon minder gereden ritten<i class="fa fa-angle-up" style="margin-left: 10px;"></i></a>
+	    		<a href="#" class="toggleRitten btn full">Toon meer<i class="fa fa-angle-down" style="margin-left: 10px;"></i></a>
+	    		<a href="#" class="toggleRitten btn full" style="display: none;">Toon minder<i class="fa fa-angle-up" style="margin-left: 10px;"></i></a>
 	    	</p>
     	</div>
     </section>

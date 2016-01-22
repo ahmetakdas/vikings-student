@@ -1,9 +1,8 @@
 #suggesties {
 	ul {
+		margin-top: 15px;
 		li {
 			text-align: center;
-			background-color: @greyDark;
-			padding: 10px;
 
 			i {
 				font-size: 40px;
@@ -13,6 +12,27 @@
 			h3 {
 				margin: 0 0 5px 0;
 				color: @blueDark;
+			}
+
+			a {
+				width: 60px;
+				height: 60px;
+				font-size: 25px;
+				color: @blue;
+				background: @white;
+				border: 2px solid @greyLight;
+				.border-radius(100%);
+    			text-align: center;
+    			position: relative;
+    			margin: 0 auto;
+    			display: block;
+
+    			img {
+    				position: absolute;
+    				left: 50%;
+				    top: 50%;
+				    transform: translate(-50%,-50%);
+    			}
 			}
 		}
 	}

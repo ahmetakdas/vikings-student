@@ -68,16 +68,18 @@ input[type="radio"] {
 
 .btn{
 	border: none;
-	.border-radius(0);
+	.border-radius(5px);
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
 	color: @white;
 	background: @blue;
-	padding: 8px;
-	line-height: 20px;
-	border: 2px solid @blue;
+	padding: 10px 20px;
+	line-height: 30px;
+	border: none;
+	font-size: 14px;
 	font-weight: 600;
+	text-transform: uppercase;
 	.transition();
 	
 	&:hover{

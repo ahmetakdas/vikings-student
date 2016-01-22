@@ -2,12 +2,15 @@ nav {
 	display: none;
 }
 #header {
-	position: relative;
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	z-index: 10000;
 
 	#bar {
 		position: relative;
-		background: @white;
-		color: @textColor;
+		background: @blue;
+		color: @white;
 		line-height: 40px;
 		padding: 10px 0;
 
@@ -17,12 +20,11 @@ nav {
 			text-align: center;
 			font-size: 22px;
 			line-height: 40px;
-			color: @black;
+			color: @white;
 		}
 		.bar_btn {
 			position: absolute;
-
-
+			z-index: 10;
 			top: 16px;
 			float: none !important;
 			font-size: 24px;
@@ -37,7 +39,7 @@ nav {
 			}
 
 			i {
-				color: @black;
+				color: @white;
 			}
 		}
 	}

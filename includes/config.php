@@ -28,7 +28,7 @@ $aPages = [
 	'/mijn-handelingen/snelweg/'		=> [
 		'title'							=> 'Snelweg',
 		'template'						=> 'handeling',
-		'icon'							=> 'fa-info-circle',
+		'icon'							=> 'snelweg',
 		'progress'						=> 67,
 		'improvement'					=> 3,
 		'suggestie'						=> true,
@@ -38,8 +38,7 @@ $aPages = [
 		'content'						=> '<p>Een autosnelweg, snelweg of autobaan is een conflictvrije weg bestemd voor snel gemotoriseerd verkeer
 		 (zoals auto\'s, motoren, bussen en vrachtwagens). Conflictvrij wil zeggen dat kruisingen ongelijkvloers zijn en dat er een middenberm is tussen de 
 		 twee rijrichtingen.</p><p>De maximale snelheid in Nederland kan verschillen tussen de 80 en 130 km/u, houd de borden dus goed in de gaten!</p>',
-		 'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p><p>Je kijkgedrag kan nog veel verbeterd worden. 
-		 Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>',
+		 'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',
@@ -49,7 +48,7 @@ $aPages = [
 	'/mijn-handelingen/rotonde/'		=> [
 		'title'							=> 'Rotonde',
 		'template'						=> 'handeling',
-		'icon'							=> 'fa-info-circle',
+		'icon'							=> 'rotonde',
 		'progress'						=> 77,
 		'improvement'					=> 4,
 		'suggestie'						=> true,
@@ -59,8 +58,7 @@ $aPages = [
 		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p><p>Je kijkgedrag kan nog veel verbeterd worden. 
-		 Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>',
+		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',
@@ -70,18 +68,17 @@ $aPages = [
 	'/mijn-handelingen/schakelen/'		=> [
 		'title'							=> 'Schakelen',
 		'template'						=> 'handeling',
-		'icon'							=> 'fa-info-circle',
+		'icon'							=> 'schakelen',
 		'progress'						=> 52,
 		'improvement'					=> 8,
-		'suggestie'						=> false,
+		'suggestie'						=> true,
 		'back'							=> $sRoot.'mijn-handelingen/',
 		'image'							=> $sRoot.'images/handelingen/schakelen.jpg',
 		'video'							=> $sRoot.'images/handelingen/schakelen.jpg',
 		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p><p>Je kijkgedrag kan nog veel verbeterd worden. 
-		 Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>',
+		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',
@@ -91,7 +88,7 @@ $aPages = [
 	'/mijn-handelingen/kijkgedrag/'		=> [
 		'title'							=> 'Kijkgedrag',
 		'template'						=> 'handeling',
-		'icon'							=> 'fa-info-circle',
+		'icon'							=> 'kijkgedrag',
 		'progress'						=> 84,
 		'improvement'					=> 1,
 		'suggestie'						=> false,
@@ -101,8 +98,7 @@ $aPages = [
 		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p><p>Je kijkgedrag kan nog veel verbeterd worden. 
-		 Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>',
+		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',
@@ -112,7 +108,7 @@ $aPages = [
 	'/mijn-handelingen/anticiperen/'	=> [
 		'title'							=> 'Anticiperen',
 		'template'						=> 'handeling',
-		'icon'							=> 'fa-info-circle',
+		'icon'							=> 'anticiperen',
 		'progress'						=> 90,
 		'suggestie'						=> false,
 		'back'							=> $sRoot.'mijn-handelingen/',
@@ -121,18 +117,17 @@ $aPages = [
 		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p><p>Je kijkgedrag kan nog veel verbeterd worden. 
-		 Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>',
+		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',
 		 									'Zorg ervoor dat je op snelheid bent wanneer je gaat invoegen.'
 		 								]
 	],
-	'/mijn-handelingen/parkeren/'		=> [
-		'title'							=> 'Parkeren',
+	'/mijn-handelingen/hellingproef/'	=> [
+		'title'							=> 'Hellingproef',
 		'template'						=> 'handeling',
-		'icon'							=> 'fa-info-circle',
+		'icon'							=> 'hellingproef',
 		'progress'						=> 78,
 		'suggestie'						=> true,
 		'back'							=> $sRoot.'mijn-handelingen/',
@@ -141,8 +136,7 @@ $aPages = [
 		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p><p>Je kijkgedrag kan nog veel verbeterd worden. 
-		 Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>',
+		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',

@@ -11,12 +11,11 @@
 			padding: 10px 15px;
 			background: @white;
 			cursor: pointer;
+			.border-radius(5px);
 
 			.icon-holder {
-				width: 60px;
-				height: 60px;
-				padding: 15px;
-				line-height: 30px;
+				min-width: 60px;
+				min-height: 60px;
 				font-size: 25px;
 				color: @blue;
 				background: @white;
@@ -26,11 +25,11 @@
     			text-align: center;
     			position: relative;
 
-    			i {
+    			img {
     				position: absolute;
-    				top: 17px;
-    				left: 17px;
-    				font-size: 25px;
+    				left: 50%;
+				    top: 50%;
+				    transform: translate(-50%,-50%);
     			}
 			}
 
@@ -43,6 +42,11 @@
 				h4 {
 					margin: 0;
 					padding: 0;
+
+					span {
+						color: @blue;
+						font-size: 14px;
+					}
 				}
 
 				.progress-bar {
@@ -145,24 +149,25 @@
 }
 
 #tips {
-	list-style: none;
 	margin: 15px 0 0 0;
 	padding: 0;
+	list-style: none;
 
 	li {
 		margin-top: 10px;
-		padding-top: 9px;
-		border-top: 1px solid @greyDark;
+		background-color: @grey;
+		padding: 20px;
+		margin-top: 10px;
+		font-family: @VWHEAD;
+		.border-radius(5px);
 
 		&:first-child {
-			border-top: none;
-			padding-top: 0;
 			margin-top: 0;
 		}
 
 		i {
+			color: @blue;
 			margin-right: 10px;
-			color: @blueDark;
 		}
 	}
 }

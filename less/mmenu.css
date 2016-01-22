@@ -27,7 +27,18 @@
   background: inherit;
   display: block;
   overflow: hidden;
-  padding: 0; }
+  padding: 0;
+  &:before {
+    content: "";
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    z-index: 10000;
+    background: @greyLight;
+    position: absolute;
+  }
+}
 
 .mm-panel {
   -webkit-transition: -webkit-transform 0.4s ease;
@@ -112,11 +123,11 @@ li.mm-vertical.mm-opened > .mm-panel {
   transform: rotate(45deg); }
 
 .mm-navbar {
-  border-bottom: 1px solid;
+  border-bottom: 1px solid @greyLight;
   border-color: inherit;
   text-align: center;
   line-height: 20px;
-  height: 40px;
+  height: 61px;
   padding: 0 40px;
   margin: 0;
   position: absolute;
@@ -132,7 +143,13 @@ li.mm-vertical.mm-opened > .mm-panel {
   .mm-navbar .mm-title {
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden; }
+    overflow: hidden;
+    font-family: @VWHEADBOLD;
+    color: #000 !important;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 15px 0;
+  }
   .mm-navbar .mm-btn {
     box-sizing: border-box;
     width: 40px;
@@ -181,7 +198,10 @@ li.mm-vertical.mm-opened > .mm-panel {
       color: inherit;
       display: block;
       padding: 10px 10px 10px 20px;
-      margin: 0; }
+      margin: 0;
+      color: @textColor;
+      font-family: @VWHEAD;
+    }
       .mm-listview > li > a.mm-arrow,
       .mm-listview > li > span.mm-arrow {
         padding-right: 50px; }
@@ -189,6 +209,7 @@ li.mm-vertical.mm-opened > .mm-panel {
       content: '';
       border-bottom-width: 1px;
       border-bottom-style: solid;
+      border-bottom-color: @grey;
       display: block;
       position: absolute;
       left: 0;
@@ -230,7 +251,7 @@ li.mm-vertical.mm-opened > .mm-panel {
   margin: 20px -20px; }
 .mm-panels > .mm-panel > .mm-listview:first-child,
 .mm-panels > .mm-panel > .mm-navbar + .mm-listview {
-  margin-top: -20px; }
+  margin-top: 5px; }
 
 .mm-listview .mm-inset {
   list-style: inside disc;
@@ -285,12 +306,13 @@ li.mm-vertical.mm-opened > .mm-panel {
   right: 23px; }
 
 .mm-menu {
-  background: #f3f3f3;
+  background: #FFF;
   border-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.7); }
   .mm-menu .mm-navbar > *,
   .mm-menu .mm-navbar a {
-    color: rgba(0, 0, 0, 0.3); }
+    color: rgba(0, 0, 0, 0.3); 
+  }
   .mm-menu .mm-navbar .mm-btn:before, .mm-menu .mm-navbar .mm-btn:after {
     border-color: rgba(0, 0, 0, 0.3); }
   .mm-menu .mm-listview {

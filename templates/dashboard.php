@@ -32,58 +32,14 @@ include("includes/header.php");
 			}
 			?>
     	</ul>
-    	<p><a href="<?=$sRoot?>mijn-ritten/">Bekijk al mijn ritten<i class="fa fa-angle-right" style="margin-left: 10px;"></i></a></p>
+    	<p><a href="<?=$sRoot?>mijn-ritten/" class="btn full">Bekijk mijn ritten</a></p>
     </section>
     <section id="hulp" class="grey border_top border_light">
     	<ul>
-    		<li><a href="#" class="btn">Bekijk voordelen</a></li>
-    		<li><a href="#" class="btn blueDark">Bel mijn instructeur</a></li>
+    		<li><a href="#" class="btn">Bel mijn instructeur</a></li>
     	</ul>
     </section>
 </div>
-<script type="text/javascript">
-	google.load('visualization', '1.1', {packages: ['corechart', 'line']});
-    google.setOnLoadCallback(drawChart);
-
-	function drawChart() {
-
-		var data = new google.visualization.DataTable();
-		data.addColumn('date', 'Datum');
-		data.addColumn('number', 'Voortgang');
-
-		data.addRows([
-			[new Date(2015, 9, 12, 13), 44],
-			[new Date(2015, 9, 18, 11, 30), 57],
-			[new Date(2015, 9, 26, 9), 64],
-			[new Date(2015, 10, 3, 11), 71],
-			[new Date(2015, 10, 8, 14, 30), 78],
-			[new Date(2015, 10, 17, 11, 30), 83]
-		]);
-
-		var options = {
-			width: "100%",
-			height: 250,
-			backgroundColor: "f5f8fa",
-			legend: 'none',
-			hAxis: {
-		      title: 'Voortgang'
-		    },
-		    vAxis: {
-		      title: 'Tijd'
-		    }
-		};
-
-		var chart = new google.visualization.LineChart(document.getElementById('chart'));
-
-		chart.draw(data, options);
-    }
-
-    var doit;
-	$(window).resize(function(){
-		clearTimeout(doit);
-		doit = setTimeout(drawChart, 100);	
-	});
-</script>
 <?
 include("includes/footer.php");
 ?>
