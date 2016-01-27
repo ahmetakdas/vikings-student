@@ -21,33 +21,43 @@ include("includes/header.php");
 			<div class="icon_holder"><i class="fa fa-play"></i></div>
 		</div>
 	</section>
-	<section class="white">
-		<h2><?=$aPage['title']?></h2>
+	<section class="grey">
+		<h4><?=$aPage['title']?></h4>
 		<?=$aPage['content']?>
 	</section>
-	<section class="grey border_top" id="feedback">
+	<section class="white border_top" id="feedback">
 		<h4>Feedback</h4>
 		<ul>
-			<li class="white">
+			<li>
+				<a class="icon-holder">
+					<img src="<?=$sRoot?>images/icons/<?=$aPage['icon']?>.png" />
+				</a>
 				<?=$aPage['feedback']?>
 				<div>06-01-2015</div>
 			</li>
 			<?
-			for($i = 0; $i < 3; $i++){
+			$aAllowedHandelingen = ['Snelweg', 'Rotonde', 'Schakelen'];
+			foreach($aHandelingen as $sKey => $aHandeling){
+				if(!in_array($aHandeling['title'], $aAllowedHandelingen) || $aHandeling['title'] == $aPage['title']){
+					continue;
+				}
 				?>
-				<li class="hide white" style="display: none;">
-					<?=$aPage['feedback']?>
-					<div>06-01-2015</div>
+				<li class="hide" style="display: none;">
+					<a class="icon-holder">
+						<img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" />
+					</a>
+					<?=$aHandeling['feedback']?>
+					<div>06-01-2016</div>
 				</li>
 				<?
 			}
 			?>
 		</ul>
 		<div class="clearfix" style="margin-top: 10px;"></div>
-		<a href="#" class="toggleAllFeedback btn full">Toon alle feedback</a>
-		<a href="#" class="toggleAllFeedback btn full" style="display: none;">Toon minder feedback</a>
+		<a href="#" class="toggleAllFeedback btn full">Toon alle feedback<i class="fa fa-angle-down" style="margin-left: 10px;"></i></a>
+		<a href="#" class="toggleAllFeedback btn full" style="display: none;">Toon minder feedback<i class="fa fa-angle-up" style="margin-left: 10px;"></i></a>
 	</section>
-	<section class="white border_top">
+	<section class="grey border_top">
 		<h4>Tips</h4>
 		<ul id="tips">
 			<?

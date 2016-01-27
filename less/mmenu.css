@@ -127,7 +127,7 @@ li.mm-vertical.mm-opened > .mm-panel {
   border-color: inherit;
   text-align: center;
   line-height: 20px;
-  height: 61px;
+  height: 51px;
   padding: 0 40px;
   margin: 0;
   position: absolute;
@@ -144,18 +144,18 @@ li.mm-vertical.mm-opened > .mm-panel {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-family: @VWHEADBOLD;
+    font-family: @VWHEAD;
     color: #000 !important;
     font-size: 22px;
     line-height: 30px;
-    padding: 15px 0;
+    padding: 10px 0;
   }
   .mm-navbar .mm-btn {
     box-sizing: border-box;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 0;
+    top: 7px;
     z-index: 1; }
     .mm-navbar .mm-btn:first-child {
       padding-left: 20px;
@@ -251,7 +251,7 @@ li.mm-vertical.mm-opened > .mm-panel {
   margin: 20px -20px; }
 .mm-panels > .mm-panel > .mm-listview:first-child,
 .mm-panels > .mm-panel > .mm-navbar + .mm-listview {
-  margin-top: 5px; }
+  margin-top: -5px; }
 
 .mm-listview .mm-inset {
   list-style: inside disc;

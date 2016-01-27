@@ -1,131 +1,131 @@
 @font-face {
     font-family: 'vw_textregular';
-    src: url('../font/vwtext-webfont.eot');
-    src: url('../font/vwtext-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwtext-webfont.woff2') format('woff2'),
-         url('../font/vwtext-webfont.woff') format('woff'),
-         url('../font/vwtext-webfont.ttf') format('truetype'),
-         url('../font/vwtext-webfont.svg#vw_textregular') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-webfont.svg#vw_textregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_textbold';
-    src: url('../font/vwtext-bold-webfont.eot');
-    src: url('../font/vwtext-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwtext-bold-webfont.woff2') format('woff2'),
-         url('../font/vwtext-bold-webfont.woff') format('woff'),
-         url('../font/vwtext-bold-webfont.ttf') format('truetype'),
-         url('../font/vwtext-bold-webfont.svg#vw_textbold') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bold-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bold-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bold-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bold-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bold-webfont.svg#vw_textbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_textbold_italic';
-    src: url('../font/vwtext-bolditalic-webfont.eot');
-    src: url('../font/vwtext-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwtext-bolditalic-webfont.woff2') format('woff2'),
-         url('../font/vwtext-bolditalic-webfont.woff') format('woff'),
-         url('../font/vwtext-bolditalic-webfont.ttf') format('truetype'),
-         url('../font/vwtext-bolditalic-webfont.svg#vw_textbold_italic') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bolditalic-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bolditalic-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bolditalic-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bolditalic-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-bolditalic-webfont.svg#vw_textbold_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_textregular_italic';
-    src: url('../font/vwtext-italic-webfont.eot');
-    src: url('../font/vwtext-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwtext-italic-webfont.woff2') format('woff2'),
-         url('../font/vwtext-italic-webfont.woff') format('woff'),
-         url('../font/vwtext-italic-webfont.ttf') format('truetype'),
-         url('../font/vwtext-italic-webfont.svg#vw_textregular_italic') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-italic-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-italic-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-italic-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-italic-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-italic-webfont.svg#vw_textregular_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_textlight';
-    src: url('../font/vwtext-light-webfont.eot');
-    src: url('../font/vwtext-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwtext-light-webfont.woff2') format('woff2'),
-         url('../font/vwtext-light-webfont.woff') format('woff'),
-         url('../font/vwtext-light-webfont.ttf') format('truetype'),
-         url('../font/vwtext-light-webfont.svg#vw_textlight') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-light-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwtext-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-light-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-light-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-light-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwtext-light-webfont.svg#vw_textlight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_headregular';
-    src: url('../font/vwhead-webfont.eot');
-    src: url('../font/vwhead-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwhead-webfont.woff2') format('woff2'),
-         url('../font/vwhead-webfont.woff') format('woff'),
-         url('../font/vwhead-webfont.ttf') format('truetype'),
-         url('../font/vwhead-webfont.svg#vw_headregular') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-webfont.svg#vw_headregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_headbold';
-    src: url('../font/vwhead-bold-webfont.eot');
-    src: url('../font/vwhead-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwhead-bold-webfont.woff2') format('woff2'),
-         url('../font/vwhead-bold-webfont.woff') format('woff'),
-         url('../font/vwhead-bold-webfont.ttf') format('truetype'),
-         url('../font/vwhead-bold-webfont.svg#vw_headbold') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bold-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bold-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bold-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bold-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bold-webfont.svg#vw_headbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_headbold_italic';
-    src: url('../font/vwhead-bolditalic-webfont.eot');
-    src: url('../font/vwhead-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwhead-bolditalic-webfont.woff2') format('woff2'),
-         url('../font/vwhead-bolditalic-webfont.woff') format('woff'),
-         url('../font/vwhead-bolditalic-webfont.ttf') format('truetype'),
-         url('../font/vwhead-bolditalic-webfont.svg#vw_headbold_italic') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bolditalic-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bolditalic-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bolditalic-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bolditalic-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-bolditalic-webfont.svg#vw_headbold_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_headextrabold';
-    src: url('../font/vwhead-extrabold-webfont.eot');
-    src: url('../font/vwhead-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwhead-extrabold-webfont.woff2') format('woff2'),
-         url('../font/vwhead-extrabold-webfont.woff') format('woff'),
-         url('../font/vwhead-extrabold-webfont.ttf') format('truetype'),
-         url('../font/vwhead-extrabold-webfont.svg#vw_headextrabold') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-extrabold-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-extrabold-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-extrabold-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-extrabold-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-extrabold-webfont.svg#vw_headextrabold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_headregular_italic';
-    src: url('../font/vwhead-italic-webfont.eot');
-    src: url('../font/vwhead-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwhead-italic-webfont.woff2') format('woff2'),
-         url('../font/vwhead-italic-webfont.woff') format('woff'),
-         url('../font/vwhead-italic-webfont.ttf') format('truetype'),
-         url('../font/vwhead-italic-webfont.svg#vw_headregular_italic') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-italic-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-italic-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-italic-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-italic-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-italic-webfont.svg#vw_headregular_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'vw_headlight';
-    src: url('../font/vwhead-light-webfont.eot');
-    src: url('../font/vwhead-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/vwhead-light-webfont.woff2') format('woff2'),
-         url('../font/vwhead-light-webfont.woff') format('woff'),
-         url('../font/vwhead-light-webfont.ttf') format('truetype'),
-         url('../font/vwhead-light-webfont.svg#vw_headlight') format('svg');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-light-webfont.eot');
+    src: url('/2015_2016/vikings/leerling/ahmet/font/vwhead-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-light-webfont.woff2') format('woff2'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-light-webfont.woff') format('woff'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-light-webfont.ttf') format('truetype'),
+         url('/2015_2016/vikings/leerling/ahmet/font/vwhead-light-webfont.svg#vw_headlight') format('svg');
     font-weight: normal;
     font-style: normal;
 }

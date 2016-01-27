@@ -6,11 +6,15 @@
 
 		li {
 			background-color: @grey;
-			padding: 15px 20px 15px;
+			padding: 10px 15px 10px;
 			margin-top: 10px;
 			font-family: @VWHEAD;
 			font-size: 13px;
 			.border-radius(5px);
+
+			h3 {
+				font-size: 15px;
+			}
 
 			&:first-child {
 				margin-top: 0;

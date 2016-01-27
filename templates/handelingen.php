@@ -2,7 +2,7 @@
 include("includes/header.php");
 ?>
 <div id="content">
-	<section class="text-centered grey border_top border_light">
+	<section class="text-centered border_top border_light">
     	<img src="<?=$sRoot?>images/progress.png" alt="Progress" />
     </section>
     <section id="handelingen" class="grey border_top">

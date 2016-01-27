@@ -23,21 +23,34 @@ include("includes/header.php");
 					}
 					?>
 					<li>
-						<a><img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" /></a>
+						<a href="<?=$sRoot.substr($sKey, 1)?>"><img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" /></a>
 					</li>
 					<?
 				}
 				?>
 			</ul>
-			<p><a class="btn full clearfix" href="<?=$sRoot?>mijn-suggesties/">Bekijk mijn suggesties<span class="right"><i class="fa fa-angle-right"></i></span></a></p>
+			<p><a class="btn full clearfix" href="<?=$sRoot?>mijn-suggesties/?rit=<?=$_GET['rit']?>&type=<?=$_GET['type']?>">Bekijk mijn suggesties<span class="right"><i class="fa fa-angle-right"></i></span></a></p>
 		</section>
 		<section class="white border_top" id="feedback">
 			<h4>Feedback van laatste les</h4>
 			<ul>
-				<li>
-					<p>Je kijkgedrag kan nog veel verbeterd worden. Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>
-					<div><?=end($aRitten['gereden'])['datetime']?></div>
-				</li>
+				<?
+				$aAllowedHandelingen = ['Snelweg', 'Rotonde', 'Schakelen'];
+				foreach($aHandelingen as $sKey => $aHandeling){
+					if(!in_array($aHandeling['title'], $aAllowedHandelingen)){
+						continue;
+					}
+					?>
+					<li>
+						<a class="icon-holder">
+							<img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" />
+						</a>
+						<?=$aHandeling['feedback']?>
+						<div>06-01-2016</div>
+					</li>
+					<?
+				}
+				?>
 			</ul>
 		</section>
 		<?
@@ -48,10 +61,23 @@ include("includes/header.php");
 		<section class="white border_top" id="feedback">
 			<h4>Feedback</h4>
 			<ul>
-				<li>
-					<p>Vandaag een goede start gemaakt. Let tijdens het invoegen vooral op de snelheid.</p>
-					<div><?=$aRit['datetime']?></div>
-				</li>
+				<?
+				$aAllowedHandelingen = ['Snelweg', 'Rotonde', 'Schakelen'];
+				foreach($aHandelingen as $sKey => $aHandeling){
+					if(!in_array($aHandeling['title'], $aAllowedHandelingen)){
+						continue;
+					}
+					?>
+					<li>
+						<a class="icon-holder">
+							<img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" />
+						</a>
+						<?=$aHandeling['feedback']?>
+						<div>06-12-2015</div>
+					</li>
+					<?
+				}
+				?>
 			</ul>
 		</section>
 	    <section id="handelingen" class="grey border_top">

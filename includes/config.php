@@ -21,7 +21,7 @@ $aPages = [
 		'back'							=> $sRoot
 	],
 	'/mijn-handelingen/'				=> [
-		'title'							=> 'Mijn handelingen',
+		'title'							=> 'Mijn voortgang',
 		'template'						=> 'handelingen',
 		'back'							=> $sRoot
 	],
@@ -55,10 +55,8 @@ $aPages = [
 		'back'							=> $sRoot.'mijn-handelingen/',
 		'image'							=> $sRoot.'images/handelingen/rotonde.jpg',
 		'video'							=> $sRoot.'images/handelingen/snelweg.jpg',
-		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
+		'content'						=> '<p>Op een rotonde wordt een combinatie gemaakt van invoegen en afslaan op een gemeenschappelijke weg. Het invoegen gaat veiliger en omdat de rotonde rond loopt, kun je toch afslaan naar de weg waarop je verder wilt gaan rijden.</p>',
+		'feedback'						=> '<p>Zorg dat je op tijd naar het verkeer kijkt wat al op de rotonde zit, zo kan je beter inschatten wanneer jij kan deelnemen aan het verkeer op de rotonde.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',
@@ -78,7 +76,7 @@ $aPages = [
 		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
+		'feedback'						=> '<p>Kijk goed naar je dashboard en probeer het schakeladvies goed op te volgen.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',
@@ -98,7 +96,7 @@ $aPages = [
 		'content'						=> '<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 		eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>',
-		'feedback'						=> '<p>Vandaag een goede start gemaakt. Let tijdens het in-voegen vooral op de snelheid.</p>',
+		'feedback'						=> '<p>Je kijkgedrag kan nog veel verbeterd worden. Kijk goed om je heen naar wat het verkeer doet, ook al rij je constant op dezelfde strook.</p>',
 		'tips'							=> [
 		 									'Houd ruimte met invoegen en voorkom chaos op de weg.',
 		 									'Kijk eerst goed voordat je je richtingaanwijzer aanzet.',

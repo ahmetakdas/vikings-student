@@ -2,8 +2,8 @@
 include("includes/header.php");
 ?>
 <div id="content">
-    <section class="text-centered grey border_top border_light">
-    	<img src="<?=$sRoot?>images/progress.png" alt="Progress" />
+    <section class="text-centered white border_top border_light">
+    	<a href="<?=$sRoot?>mijn-handelingen/"><img src="<?=$sRoot?>images/progress.png" alt="Progress" /></a>
     </section>
     <section id="ritten" class="white border_top">
     	<h4>Aankomende ritten</h4>
@@ -36,7 +36,7 @@ include("includes/header.php");
     </section>
     <section id="hulp" class="grey border_top border_light">
     	<ul>
-    		<li><a href="#" class="btn">Bel mijn instructeur</a></li>
+    		<li><a href="tel:0653538173" class="btn">Bel mijn instructeur</a></li>
     	</ul>
     </section>
 </div>

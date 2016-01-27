@@ -1,4 +1,8 @@
 <?
+if(isset($_GET['rit']) && isset($_GET['type'])){
+	$aPage['back'] = $sRoot.'mijn-ritten/?rit='.$_GET['rit'].'&type='.$_GET['type'];
+}
+
 include("includes/header.php");
 ?>
 <div id="content">
@@ -24,7 +28,7 @@ include("includes/header.php");
 				}
 				?>
 				<li>
-					<a><img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" /></a>
+					<a href="<?=$sRoot.substr($sKey, 1)?>"><img src="<?=$sRoot?>images/icons/<?=$aHandeling['icon']?>.png" /></a>
 				</li>
 				<?
 			}

@@ -32,7 +32,7 @@
 			<li><a href="<?=$sRoot?>">Dashboard</a></li>
 			<li><a href="<?=$sRoot?>mijn-profiel/">Mijn profiel</a></li>
 			<li><a href="<?=$sRoot?>mijn-ritten/">Mijn ritten</a></li>
-			<li><a href="<?=$sRoot?>mijn-handelingen/">Mijn handelingen</a>
+			<li><a href="<?=$sRoot?>mijn-handelingen/">Mijn voortgang</a>
 			   <ul>
 			   		<?
 			   		foreach($aHandelingen as $sKey => $aHandeling){
